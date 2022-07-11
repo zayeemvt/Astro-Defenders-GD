@@ -32,6 +32,6 @@ func _process(delta):
 			var bullet_instance = bullet.instance()
 			bullet_instance.global_position = $"Laser Point".global_position
 			bullet_instance.direction = Vector2(0, -1)
-			get_parent().add_child(bullet_instance)
+			owner.add_child(bullet_instance)
 			$"Fire Timer".start()
 

@@ -1,6 +1,6 @@
 extends Area2D
 
-export (int) var speed = 15
+export (int) var speed = 1000
 
 var direction := Vector2.ZERO
 
@@ -11,7 +11,7 @@ func _ready():
 
 func _physics_process(delta):
 	if direction != Vector2.ZERO:
-		var velocity = direction * speed
+		var velocity = direction * speed * delta
 		
 		global_position += velocity
 	
@@ -22,4 +22,10 @@ func _physics_process(delta):
 #	pass
 
 func _on_VisibilityNotifier2D_screen_exited():
+	queue_free()
+
+func _on_Bullet_area_entered(area):
+	if area.has_method("hit"):
+		area.hit()
+		
 	queue_free()
