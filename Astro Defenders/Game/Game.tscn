@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Game/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Game/Spawner/Spawner.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Game/Game HUD/Game HUD.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Game/Game.gd" type="Script" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 12, 300 )
@@ -9,7 +11,8 @@ extents = Vector2( 12, 300 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 168, 12 )
 
-[node name="Node2D" type="Node2D"]
+[node name="Game" type="Node2D"]
+script = ExtResource( 4 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 485, 569 )
@@ -33,5 +36,11 @@ shape = SubResource( 1 )
 position = Vector2( 456, -12 )
 shape = SubResource( 2 )
 
+[node name="Divider" type="Line2D" parent="Game Area"]
+points = PoolVector2Array( 312, 600, 312, 0 )
+width = 2.0
+default_color = Color( 1, 1, 1, 1 )
+
 [node name="Spawner" parent="." instance=ExtResource( 2 )]
-position = Vector2( 456, -12 )
+
+[node name="Game HUD" parent="." instance=ExtResource( 3 )]

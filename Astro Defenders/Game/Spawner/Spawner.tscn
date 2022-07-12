@@ -2,11 +2,15 @@
 
 [ext_resource path="res://Game/Spawner/Spawner.gd" type="Script" id=1]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 120, 12 )
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 111, 12 )
 
 [node name="Spawner" type="Node2D"]
+position = Vector2( 457, -12 )
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
@@ -14,6 +18,7 @@ one_shot = true
 [node name="Spawn Region" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spawn Region"]
-shape = SubResource( 1 )
+position = Vector2( 1, 0 )
+shape = SubResource( 3 )
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

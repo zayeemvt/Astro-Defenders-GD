@@ -18,8 +18,6 @@ func _ready():
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
 	speed = rng.randi_range(base_speed, max_speed)
-	connect("junk_despawn", get_parent(), "_on_Junk_junk_despawn")
-	connect("junk_off_screen", get_node("../../Player"), "_on_Junk_junk_off_screen")
 
 func _physics_process(delta: float) -> void:
 	var velocity = Vector2(0,1) * speed * delta

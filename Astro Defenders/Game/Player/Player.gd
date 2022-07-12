@@ -7,11 +7,11 @@ var bullet = preload("res://Game/Bullet/Bullet.tscn")
 var lives
 
 signal player_dead
+signal update_lives
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	lives = 3
-	connect("player_dead", get_node("../Spawner"), "_on_Player_player_dead")
 	
 func _physics_process(delta: float) -> void:
 	var movement_direction := Vector2.ZERO
@@ -41,6 +41,7 @@ func _process(delta):
 
 func hit():
 	lives -= 1
+	emit_signal("update_lives", lives)
 	if lives == 0:
 		emit_signal("player_dead")
 		queue_free()
