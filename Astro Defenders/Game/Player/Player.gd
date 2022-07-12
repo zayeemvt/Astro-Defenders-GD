@@ -4,10 +4,14 @@ class_name Player
 export (int) var speed = 350
 
 var bullet = preload("res://Game/Bullet/Bullet.tscn")
+var lives
+
+signal player_dead
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	lives = 3
+	connect("player_dead", get_node("../Spawner"), "_on_Player_player_dead")
 	
 func _physics_process(delta: float) -> void:
 	var movement_direction := Vector2.ZERO
@@ -35,3 +39,11 @@ func _process(delta):
 			owner.add_child(bullet_instance)
 			$"Fire Timer".start()
 
+func hit():
+	lives -= 1
+	if lives == 0:
+		emit_signal("player_dead")
+		queue_free()
+
+func _on_Junk_junk_off_screen():
+	hit()

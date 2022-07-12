@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 45, 21 )
 
-[node name="Junk" type="Area2D"]
+[node name="Junk" type="Area2D" groups=["Enemy"]]
 scale = Vector2( 0.75, 0.75 )
 collision_layer = 2
 collision_mask = 5
@@ -20,3 +20,6 @@ shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
+
+[connection signal="area_entered" from="." to="." method="_on_Junk_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_Junk_body_entered"]

@@ -21,11 +21,13 @@ func _physics_process(delta):
 #func _process(delta):
 #	pass
 
+func hit():
+	queue_free()
+
 func _on_VisibilityNotifier2D_screen_exited():
 	queue_free()
 
 func _on_Bullet_area_entered(area):
 	if area.has_method("hit"):
 		area.hit()
-		
-	queue_free()
+		queue_free()
