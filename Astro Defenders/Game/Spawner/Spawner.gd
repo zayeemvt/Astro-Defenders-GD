@@ -37,7 +37,7 @@ func _on_Timer_timeout():
 		enemies_spawned += 1
 		add_child(enemy_instance)
 	
-	print(timer_time)
+#	print(timer_time)
 	$Timer.start(timer_time)
 
 func _on_Junk_junk_despawn(score):

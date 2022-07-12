@@ -35,7 +35,7 @@ func _process(delta):
 		if $"Fire Timer".is_stopped():
 			var bullet_instance = bullet.instance()
 			bullet_instance.global_position = $"Laser Point".global_position
-			bullet_instance.direction = Vector2(0, -1)
+			bullet_instance.direction = Vector2.UP
 			owner.add_child(bullet_instance)
 			$"Fire Timer".start()
 

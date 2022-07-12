@@ -20,7 +20,7 @@ func _ready():
 	speed = rng.randi_range(base_speed, max_speed)
 
 func _physics_process(delta: float) -> void:
-	var velocity = Vector2(0,1) * speed * delta
+	var velocity = Vector2.DOWN * speed * delta
 	
 	global_position += velocity
 	
