@@ -7,8 +7,11 @@ var bgm = preload("res://Music/BGM/MM2 - Password.ogg")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	MusicPlayer.load_song(bgm, -12)
-	MusicPlayer.play()
+	if (Global.menu == false):
+		MusicPlayer.load_song(bgm, -12)
+		MusicPlayer.play()
+		Global.menu = true
+		
 	highlight(node_list[Global.cur_selection])
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -34,11 +37,12 @@ func unhighlight(node):
 func select_option():
 	match Global.cur_selection:
 		Global.MENU_OPTIONS.PLAY:
+			Global.menu = false
 			get_tree().change_scene("res://Game/Game.tscn")
 		Global.MENU_OPTIONS.INSTRUCTIONS:
 			pass
 		Global.MENU_OPTIONS.HIGH_SCORES:
-			pass
+			get_tree().change_scene("res://Main Menu/High Scores/High Scores.tscn")
 		Global.MENU_OPTIONS.SETTINGS:
 			pass
 		Global.MENU_OPTIONS.CREDITS:

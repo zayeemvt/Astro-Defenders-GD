@@ -1,0 +1,144 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/Black Background.png" type="Texture" id=1]
+[ext_resource path="res://assets/Menu_UI_Large.tres" type="Theme" id=2]
+[ext_resource path="res://assets/Menu_UI.tres" type="Theme" id=3]
+[ext_resource path="res://Main Menu/High Scores/High Scores.gd" type="Script" id=4]
+
+[node name="High Scores" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="BlackBackground" type="Sprite" parent="."]
+position = Vector2( 300, 300 )
+texture = ExtResource( 1 )
+
+[node name="Screen Label" type="Label" parent="."]
+margin_top = 72.0
+margin_right = 600.0
+margin_bottom = 120.0
+theme = ExtResource( 2 )
+text = "HIGH SCORES"
+align = 1
+valign = 1
+
+[node name="Scores" type="Node2D" parent="."]
+
+[node name="Score1" type="Node2D" parent="Scores"]
+position = Vector2( 0, 50 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Name" type="Label" parent="Scores/Score1"]
+margin_left = 104.0
+margin_top = 160.0
+margin_right = 600.0
+margin_bottom = 198.0
+theme = ExtResource( 3 )
+text = "PLAYER1234"
+valign = 1
+
+[node name="Value" type="Label" parent="Scores/Score1"]
+margin_left = 240.0
+margin_top = 160.0
+margin_right = 600.0
+margin_bottom = 198.0
+theme = ExtResource( 3 )
+text = "000000"
+align = 1
+
+[node name="Score2" type="Node2D" parent="Scores"]
+position = Vector2( 0, 100 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Name" type="Label" parent="Scores/Score2"]
+margin_left = 104.0
+margin_top = 160.0
+margin_right = 600.0
+margin_bottom = 198.0
+theme = ExtResource( 3 )
+text = "PLAYER1234"
+valign = 1
+
+[node name="Value" type="Label" parent="Scores/Score2"]
+margin_left = 240.0
+margin_top = 160.0
+margin_right = 600.0
+margin_bottom = 198.0
+theme = ExtResource( 3 )
+text = "000000"
+align = 1
+
+[node name="Score3" type="Node2D" parent="Scores"]
+position = Vector2( 0, 150 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Name" type="Label" parent="Scores/Score3"]
+margin_left = 104.0
+margin_top = 160.0
+margin_right = 600.0
+margin_bottom = 198.0
+theme = ExtResource( 3 )
+text = "PLAYER1234"
+valign = 1
+
+[node name="Value" type="Label" parent="Scores/Score3"]
+margin_left = 240.0
+margin_top = 160.0
+margin_right = 600.0
+margin_bottom = 198.0
+theme = ExtResource( 3 )
+text = "000000"
+align = 1
+
+[node name="Score4" type="Node2D" parent="Scores"]
+position = Vector2( 0, 200 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Name" type="Label" parent="Scores/Score4"]
+margin_left = 104.0
+margin_top = 160.0
+margin_right = 600.0
+margin_bottom = 198.0
+theme = ExtResource( 3 )
+text = "PLAYER1234"
+valign = 1
+
+[node name="Value" type="Label" parent="Scores/Score4"]
+margin_left = 240.0
+margin_top = 160.0
+margin_right = 600.0
+margin_bottom = 198.0
+theme = ExtResource( 3 )
+text = "000000"
+align = 1
+
+[node name="Score5" type="Node2D" parent="Scores"]
+position = Vector2( 0, 250 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Name" type="Label" parent="Scores/Score5"]
+margin_left = 104.0
+margin_top = 160.0
+margin_right = 600.0
+margin_bottom = 198.0
+theme = ExtResource( 3 )
+text = "PLAYER1234"
+valign = 1
+
+[node name="Value" type="Label" parent="Scores/Score5"]
+margin_left = 240.0
+margin_top = 160.0
+margin_right = 600.0
+margin_bottom = 198.0
+theme = ExtResource( 3 )
+text = "000000"
+align = 1

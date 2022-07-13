@@ -3,6 +3,7 @@ extends Node
 enum MENU_OPTIONS { PLAY, INSTRUCTIONS, HIGH_SCORES, SETTINGS, CREDITS }
 
 var cur_selection = MENU_OPTIONS.PLAY
+var menu = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
