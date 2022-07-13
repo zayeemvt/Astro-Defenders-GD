@@ -9,12 +9,18 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Area2D",
+"class": "Enemy",
+"language": "GDScript",
+"path": "res://Game/Enemy/Enemy.gd"
+}, {
 "base": "KinematicBody2D",
 "class": "Player",
 "language": "GDScript",
 "path": "res://Game/Player/Player.gd"
 } ]
 _global_script_class_icons={
+"Enemy": "",
 "Player": ""
 }
 
@@ -23,6 +29,10 @@ _global_script_class_icons={
 config/name="Astro Defenders"
 run/main_scene="res://Game/Game.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+GameVariables="*res://GameVariables.gd"
 
 [display]
 

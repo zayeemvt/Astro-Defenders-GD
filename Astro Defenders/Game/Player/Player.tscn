@@ -1,18 +1,18 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Game/Player/Player.png" type="Texture" id=1]
-[ext_resource path="res://Game/Player/Player.gd" type="Script" id=2]
+[ext_resource path="res://Game/Player/Player.gd" type="Script" id=1]
+[ext_resource path="res://Game/Player/Player.png" type="Texture" id=2]
 
 [node name="Player" type="KinematicBody2D"]
 scale = Vector2( 0.2, 0.2 )
 collision_mask = 2
-script = ExtResource( 2 )
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Sprite" type="Sprite" parent="."]
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 
 [node name="Hitbox" type="CollisionPolygon2D" parent="."]
 polygon = PoolVector2Array( 0, 24, -49, 48, -2, -49, 2, -49, 50, 49 )
@@ -21,6 +21,6 @@ polygon = PoolVector2Array( 0, 24, -49, 48, -2, -49, 2, -49, 50, 49 )
 position = Vector2( 0, -50 )
 
 [node name="Fire Timer" type="Timer" parent="."]
-wait_time = 0.2
+wait_time = 0.1
 one_shot = true
 autostart = true

@@ -46,5 +46,5 @@ func hit():
 		emit_signal("player_dead")
 		queue_free()
 
-func _on_Junk_junk_off_screen():
+func _on_Enemy_enemy_off_screen():
 	hit()

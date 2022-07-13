@@ -6,7 +6,6 @@
 extents = Vector2( 111, 12 )
 
 [node name="Spawner" type="Node2D"]
-position = Vector2( 457, -12 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true

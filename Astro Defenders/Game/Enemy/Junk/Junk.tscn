@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Game/Enemy/Junk/Junk.png" type="Texture" id=2]
+[ext_resource path="res://Game/Enemy/Enemy.tscn" type="PackedScene" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 45, 21 )
+
+[node name="Junk" instance=ExtResource( 3 )]
+scale = Vector2( 0.75, 0.75 )
+base_speed = 100
+score = 50
+
+[node name="Hitbox" parent="." index="0"]
+shape = SubResource( 1 )
+
+[node name="Sprite" parent="." index="1"]
+texture = ExtResource( 2 )
