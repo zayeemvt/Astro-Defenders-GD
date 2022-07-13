@@ -6,12 +6,12 @@ var bgm = preload("res://Music/BGM/MM2 - Victory.wav")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	MusicPlayer.load_song(bgm, -9)
+	MusicPlayer.load_song(bgm, -12)
 	MusicPlayer.play()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	progress += 0.68
 	$ProgressBar.value = int(progress)
 

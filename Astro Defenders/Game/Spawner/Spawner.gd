@@ -76,11 +76,6 @@ func _on_Enemy_enemy_despawn(score):
 				cur_threshold = threshold
 				_increase_difficulty()
 
-func _on_Player_player_dead():
-	for child in get_children():
-		if child.is_in_group("Enemy"):
-			queue_free()
-
 func _increase_difficulty():
 	difficulty += 1
 	timer_time = spawn_intervals[difficulty]

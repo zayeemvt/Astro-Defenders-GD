@@ -4,8 +4,7 @@ var bgm = preload("res://Music/BGM/MM5 - Gravity Man.ogg")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	MusicPlayer.load_song(bgm, -12)
-	$Player.connect("player_dead", $Spawner, "_on_Player_player_dead")
+	MusicPlayer.load_song(bgm, -9)
 	$Player.connect("player_dead", self, "_on_Player_player_dead")
 	$Player.connect("update_lives", $"Game HUD", "_on_Player_update_lives")
 	$Spawner.connect("enemy_off_screen", $Player, "_on_Enemy_enemy_off_screen")
@@ -18,6 +17,4 @@ func _ready():
 #	pass
 
 func _on_Player_player_dead():
-	for child in get_children():
-		if child.is_in_group("Projectile"):
-			remove_child(child)
+	get_tree().change_scene("res://Game Over/Game Over.tscn")

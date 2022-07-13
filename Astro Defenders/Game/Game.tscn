@@ -18,7 +18,7 @@ script = ExtResource( 4 )
 [node name="Background" parent="." instance=ExtResource( 5 )]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 485, 569 )
+position = Vector2( 456, 568 )
 
 [node name="Game Area" type="StaticBody2D" parent="."]
 collision_layer = 128

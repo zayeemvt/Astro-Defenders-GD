@@ -12,7 +12,7 @@ func _ready():
 	highlight(node_list[Global.cur_selection])
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	unhighlight(node_list[Global.cur_selection])
 	
 	if Input.is_action_just_pressed("player_down"):
@@ -26,10 +26,10 @@ func _process(delta):
 		select_option()
 
 func highlight(node):
-	node.get_node("Label").add_color_override("font_color", Color(0.20, 0.33, 1, 1))
+	node.add_color_override("font_color", Color(0.20, 0.33, 1, 1))
 
 func unhighlight(node):
-	node.get_node("Label").add_color_override("font_color", Color(1, 1, 1, 1))
+	node.add_color_override("font_color", Color(1, 1, 1, 1))
 
 func select_option():
 	match Global.cur_selection:

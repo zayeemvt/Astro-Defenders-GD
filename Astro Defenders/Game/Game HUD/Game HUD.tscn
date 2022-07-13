@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Game/Player/Player.png" type="Texture" id=1]
 [ext_resource path="res://Game/Game HUD/Game HUD.gd" type="Script" id=2]
-[ext_resource path="res://assets/Fonts/joystix32.tres" type="DynamicFont" id=3]
+[ext_resource path="res://assets/Game_UI.tres" type="Theme" id=3]
 
 [node name="Game HUD" type="Node2D"]
 script = ExtResource( 2 )
@@ -12,7 +12,7 @@ margin_left = 32.0
 margin_top = 32.0
 margin_right = 275.0
 margin_bottom = 113.0
-custom_fonts/font = ExtResource( 3 )
+theme = ExtResource( 3 )
 text = "ASTRO
 Defenders"
 align = 1
@@ -22,7 +22,7 @@ margin_left = 32.0
 margin_top = 216.0
 margin_right = 177.0
 margin_bottom = 258.0
-custom_fonts/font = ExtResource( 3 )
+theme = ExtResource( 3 )
 text = "Score"
 uppercase = true
 
@@ -31,7 +31,7 @@ margin_left = 102.0
 margin_top = 264.0
 margin_right = 264.0
 margin_bottom = 303.0
-custom_fonts/font = ExtResource( 3 )
+theme = ExtResource( 3 )
 text = "000000"
 
 [node name="Lives Name" type="Label" parent="."]
@@ -39,7 +39,7 @@ margin_left = 32.0
 margin_top = 400.0
 margin_right = 167.0
 margin_bottom = 439.0
-custom_fonts/font = ExtResource( 3 )
+theme = ExtResource( 3 )
 text = "Lives"
 uppercase = true
 
