@@ -1,7 +1,7 @@
 extends Node2D
 
 onready var node_list = [$"Selections/Play", $"Selections/Instructions", $"Selections/High Scores",
-				 $"Selections/Settings", $"Selections/Credits"]
+				 $"Selections/Settings", $"Selections/Credits", $"Selections/Quit"]
 
 var bgm = preload("res://Music/BGM/MM2 - Password.ogg")
 
@@ -19,9 +19,9 @@ func _process(_delta):
 	unhighlight(node_list[Global.cur_selection])
 	
 	if Input.is_action_just_pressed("player_down"):
-		Global.cur_selection = (Global.cur_selection + 1) % 5
+		Global.cur_selection = (Global.cur_selection + 1) % 6
 	if Input.is_action_just_pressed("player_up"):
-		Global.cur_selection = (Global.cur_selection + 4) % 5
+		Global.cur_selection = (Global.cur_selection + 5) % 6
 	
 	highlight(node_list[Global.cur_selection])
 	
@@ -47,3 +47,5 @@ func select_option():
 			pass
 		Global.MENU_OPTIONS.CREDITS:
 			pass
+		Global.MENU_OPTIONS.QUIT:
+			get_tree().quit()

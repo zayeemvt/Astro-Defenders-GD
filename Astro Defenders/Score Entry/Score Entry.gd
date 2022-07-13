@@ -1,19 +1,21 @@
 extends Node2D
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
+var change_scene = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	$"Name Entry".grab_focus()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	if (Input.is_action_just_pressed("player_shoot")):
-		var entry = {"name" : "New_Player", "score" : GameVariables.score}
-		GameVariables.add_score(entry)
+	if change_scene:
 		get_tree().change_scene("res://Main Menu/Main Menu.tscn")
+
+
+
+
+func _on_Name_Entry_text_entered(new_text):
+	var entry = {"name" : new_text, "score" : GameVariables.score}
+	GameVariables.add_score(entry)
+	change_scene = true
