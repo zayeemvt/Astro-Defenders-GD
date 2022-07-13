@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/MM3 - Weapon Get.ogg-24b77b33ad32b9d85743c5bed98ec033.oggstr"
+
+[deps]
+
+source_file="res://Music/BGM/MM3 - Weapon Get.ogg"
+dest_files=[ "res://.import/MM3 - Weapon Get.ogg-24b77b33ad32b9d85743c5bed98ec033.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Splash.png-7ee8f09b26a6706be9ec9a0bd2bf3cb8.stex"
+path="res://.import/Load Bar.png-177c6c756cf4def1fae9fdb8a15ddd61.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Splash.png"
-dest_files=[ "res://.import/Splash.png-7ee8f09b26a6706be9ec9a0bd2bf3cb8.stex" ]
+source_file="res://Splash/Load Bar.png"
+dest_files=[ "res://.import/Load Bar.png-177c6c756cf4def1fae9fdb8a15ddd61.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0
