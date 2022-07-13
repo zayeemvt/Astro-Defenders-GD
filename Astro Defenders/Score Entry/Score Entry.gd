@@ -14,4 +14,6 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	if (Input.is_action_just_pressed("player_shoot")):
+		var entry = {"name" : "New_Player", "score" : GameVariables.score}
+		GameVariables.add_score(entry)
 		get_tree().change_scene("res://Main Menu/Main Menu.tscn")

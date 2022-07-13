@@ -14,15 +14,16 @@ func _ready():
 #func _process(delta):
 #	pass
 
-func sort_scores():
-	var new_high_score = false
+func check_score():
+	for entry in high_scores:
+		if score > entry.score:
+			return true
 	
+	return false
+
+func add_score(entry):
 	for i in range(0, high_scores.size()):
-		if score > high_scores[i].score:
-			var temp = score
-			score = high_scores[i].score
-			high_scores[i].score = temp
-			
-			new_high_score = true
-	
-	return new_high_score
+		if entry.score > high_scores[i].score:
+			var temp = entry
+			entry = high_scores[i]
+			high_scores[i] = temp

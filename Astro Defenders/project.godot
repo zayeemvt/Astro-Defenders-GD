@@ -34,7 +34,6 @@ config/icon="res://icon.png"
 
 GameVariables="*res://GameVariables.gd"
 MusicPlayer="*res://Music/MusicPlayer.tscn"
-BGM="*res://Music/BGM.gd"
 Global="*res://Global.gd"
 
 [display]

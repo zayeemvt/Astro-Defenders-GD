@@ -25,23 +25,20 @@ valign = 1
 
 [node name="Score1" type="Node2D" parent="Scores"]
 position = Vector2( 0, 50 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="Name" type="Label" parent="Scores/Score1"]
-margin_left = 104.0
-margin_top = 160.0
-margin_right = 600.0
-margin_bottom = 198.0
+margin_left = 89.0
+margin_top = 158.0
+margin_right = 585.0
+margin_bottom = 196.0
 theme = ExtResource( 3 )
 text = "PLAYER1234"
 valign = 1
 
 [node name="Value" type="Label" parent="Scores/Score1"]
-margin_left = 240.0
+margin_left = 252.0
 margin_top = 160.0
-margin_right = 600.0
+margin_right = 612.0
 margin_bottom = 198.0
 theme = ExtResource( 3 )
 text = "000000"
@@ -49,23 +46,20 @@ align = 1
 
 [node name="Score2" type="Node2D" parent="Scores"]
 position = Vector2( 0, 100 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="Name" type="Label" parent="Scores/Score2"]
-margin_left = 104.0
-margin_top = 160.0
-margin_right = 600.0
-margin_bottom = 198.0
+margin_left = 89.0
+margin_top = 158.0
+margin_right = 585.0
+margin_bottom = 196.0
 theme = ExtResource( 3 )
 text = "PLAYER1234"
 valign = 1
 
 [node name="Value" type="Label" parent="Scores/Score2"]
-margin_left = 240.0
+margin_left = 252.0
 margin_top = 160.0
-margin_right = 600.0
+margin_right = 612.0
 margin_bottom = 198.0
 theme = ExtResource( 3 )
 text = "000000"
@@ -73,23 +67,20 @@ align = 1
 
 [node name="Score3" type="Node2D" parent="Scores"]
 position = Vector2( 0, 150 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="Name" type="Label" parent="Scores/Score3"]
-margin_left = 104.0
-margin_top = 160.0
-margin_right = 600.0
-margin_bottom = 198.0
+margin_left = 89.0
+margin_top = 158.0
+margin_right = 585.0
+margin_bottom = 196.0
 theme = ExtResource( 3 )
 text = "PLAYER1234"
 valign = 1
 
 [node name="Value" type="Label" parent="Scores/Score3"]
-margin_left = 240.0
+margin_left = 252.0
 margin_top = 160.0
-margin_right = 600.0
+margin_right = 612.0
 margin_bottom = 198.0
 theme = ExtResource( 3 )
 text = "000000"
@@ -97,23 +88,20 @@ align = 1
 
 [node name="Score4" type="Node2D" parent="Scores"]
 position = Vector2( 0, 200 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="Name" type="Label" parent="Scores/Score4"]
-margin_left = 104.0
-margin_top = 160.0
-margin_right = 600.0
-margin_bottom = 198.0
+margin_left = 89.0
+margin_top = 158.0
+margin_right = 585.0
+margin_bottom = 196.0
 theme = ExtResource( 3 )
 text = "PLAYER1234"
 valign = 1
 
 [node name="Value" type="Label" parent="Scores/Score4"]
-margin_left = 240.0
+margin_left = 252.0
 margin_top = 160.0
-margin_right = 600.0
+margin_right = 612.0
 margin_bottom = 198.0
 theme = ExtResource( 3 )
 text = "000000"
@@ -121,23 +109,20 @@ align = 1
 
 [node name="Score5" type="Node2D" parent="Scores"]
 position = Vector2( 0, 250 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="Name" type="Label" parent="Scores/Score5"]
-margin_left = 104.0
-margin_top = 160.0
-margin_right = 600.0
-margin_bottom = 198.0
+margin_left = 89.0
+margin_top = 158.0
+margin_right = 585.0
+margin_bottom = 196.0
 theme = ExtResource( 3 )
 text = "PLAYER1234"
 valign = 1
 
 [node name="Value" type="Label" parent="Scores/Score5"]
-margin_left = 240.0
+margin_left = 252.0
 margin_top = 160.0
-margin_right = 600.0
+margin_right = 612.0
 margin_bottom = 198.0
 theme = ExtResource( 3 )
 text = "000000"

@@ -6,7 +6,7 @@ var bgm = preload("res://Music/BGM/MM2 - Victory.wav")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	MusicPlayer.load_song(bgm, -12)
+	MusicPlayer.stream = bgm
 	MusicPlayer.play()
 
 

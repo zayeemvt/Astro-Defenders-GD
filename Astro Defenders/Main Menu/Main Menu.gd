@@ -8,7 +8,7 @@ var bgm = preload("res://Music/BGM/MM2 - Password.ogg")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	if (Global.menu == false):
-		MusicPlayer.load_song(bgm, -12)
+		MusicPlayer.stream = bgm
 		MusicPlayer.play()
 		Global.menu = true
 		
