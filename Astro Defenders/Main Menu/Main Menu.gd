@@ -2,6 +2,9 @@ extends Node2D
 
 onready var node_list = [$"Selections/Play", $"Selections/Instructions", $"Selections/High Scores",
 				 $"Selections/Settings", $"Selections/Credits", $"Selections/Quit"]
+onready var cursor = $"Menu Cursor"
+
+onready var offset = int(node_list[0].rect_size.y / 2)
 
 var bgm = preload("res://Music/MM2 - Password.ogg")
 
@@ -16,7 +19,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	unhighlight(node_list[Global.cur_selection])
+#	unhighlight(node_list[Global.cur_selection])
 	
 	if Input.is_action_just_pressed("player_down"):
 		Global.cur_selection = (Global.cur_selection + 1) % 6
@@ -29,10 +32,13 @@ func _process(_delta):
 		select_option()
 
 func highlight(node):
-	node.add_color_override("font_color", Color(0.20, 0.33, 1, 1))
+#	node.add_color_override("font_color", Color(0.20, 0.33, 1, 1))
+	$"Menu Cursor".position.y = node.rect_position.y + offset
+	pass
 
 func unhighlight(node):
-	node.add_color_override("font_color", Color(1, 1, 1, 1))
+#	node.add_color_override("font_color", Color(1, 1, 1, 1))
+	pass
 
 func select_option():
 	match Global.cur_selection:

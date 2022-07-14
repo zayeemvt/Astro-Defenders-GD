@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Main Menu/Main Menu.gd" type="Script" id=1]
 [ext_resource path="res://assets/Black Background.png" type="Texture" id=2]
 [ext_resource path="res://assets/Menu_UI_Large.tres" type="Theme" id=3]
 [ext_resource path="res://assets/Menu_UI.tres" type="Theme" id=4]
+[ext_resource path="res://assets/Cursor/Menu Cursor.tscn" type="PackedScene" id=5]
 
 [node name="Main Menu" type="Node2D"]
 script = ExtResource( 1 )
@@ -27,55 +28,60 @@ clip_text = true
 [node name="Selections" type="Node2D" parent="."]
 
 [node name="Play" type="Label" parent="Selections"]
+margin_left = 192.0
 margin_top = 200.0
 margin_right = 600.0
 margin_bottom = 246.0
 theme = ExtResource( 4 )
 text = "PLAY"
-align = 1
 valign = 1
 
 [node name="Instructions" type="Label" parent="Selections"]
+margin_left = 192.0
 margin_top = 260.0
 margin_right = 600.0
 margin_bottom = 306.0
 theme = ExtResource( 4 )
 text = "INSTRUCTIONS"
-align = 1
 valign = 1
 
 [node name="High Scores" type="Label" parent="Selections"]
+margin_left = 192.0
 margin_top = 320.0
 margin_right = 600.0
 margin_bottom = 366.0
 theme = ExtResource( 4 )
 text = "HIGH SCORES"
-align = 1
 valign = 1
 
 [node name="Settings" type="Label" parent="Selections"]
+margin_left = 192.0
 margin_top = 380.0
 margin_right = 600.0
 margin_bottom = 426.0
 theme = ExtResource( 4 )
 text = "SETTINGS"
-align = 1
 valign = 1
 
 [node name="Credits" type="Label" parent="Selections"]
+margin_left = 192.0
 margin_top = 440.0
 margin_right = 600.0
 margin_bottom = 486.0
 theme = ExtResource( 4 )
 text = "CREDITS"
-align = 1
 valign = 1
 
 [node name="Quit" type="Label" parent="Selections"]
+margin_left = 192.0
 margin_top = 500.0
 margin_right = 600.0
-margin_bottom = 534.0
+margin_bottom = 546.0
 theme = ExtResource( 4 )
 text = "EXIT"
-align = 1
 valign = 1
+
+[node name="Menu Cursor" parent="." instance=ExtResource( 5 )]
+position = Vector2( 168, 224 )
+frame = 1
+playing = true
