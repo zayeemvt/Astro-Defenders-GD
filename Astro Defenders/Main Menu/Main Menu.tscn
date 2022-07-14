@@ -83,5 +83,4 @@ valign = 1
 
 [node name="Menu Cursor" parent="." instance=ExtResource( 5 )]
 position = Vector2( 168, 224 )
-frame = 1
-playing = true
+frame = 0

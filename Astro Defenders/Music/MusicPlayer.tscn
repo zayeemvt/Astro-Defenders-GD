@@ -2,5 +2,3 @@
 
 [node name="MusicPlayer" type="AudioStreamPlayer"]
 bus = "Music"
-
-[connection signal="finished" from="." to="." method="_on_MusicPlayer_finished"]

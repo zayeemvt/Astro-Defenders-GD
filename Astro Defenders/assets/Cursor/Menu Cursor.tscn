@@ -15,8 +15,10 @@ animations = [ {
 "frames": [ SubResource( 1 ), SubResource( 2 ) ],
 "loop": true,
 "name": "default",
-"speed": 5.0
+"speed": 3.0
 } ]
 
 [node name="Menu Cursor" type="AnimatedSprite"]
 frames = SubResource( 3 )
+frame = 1
+playing = true

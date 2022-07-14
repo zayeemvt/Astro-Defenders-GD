@@ -34,7 +34,6 @@ func _process(_delta):
 func highlight(node):
 #	node.add_color_override("font_color", Color(0.20, 0.33, 1, 1))
 	$"Menu Cursor".position.y = node.rect_position.y + offset
-	pass
 
 func unhighlight(node):
 #	node.add_color_override("font_color", Color(1, 1, 1, 1))
@@ -50,7 +49,7 @@ func select_option():
 		Global.MENU_OPTIONS.HIGH_SCORES:
 			get_tree().change_scene("res://Main Menu/High Scores/High Scores.tscn")
 		Global.MENU_OPTIONS.SETTINGS:
-			pass
+			get_tree().change_scene("res://Main Menu/Settings/Settings.tscn")
 		Global.MENU_OPTIONS.CREDITS:
 			pass
 		Global.MENU_OPTIONS.QUIT:
