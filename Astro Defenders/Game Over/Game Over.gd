@@ -1,6 +1,6 @@
 extends Node2D
 
-var bgm = preload("res://Music/BGM/MM3 - Weapon Get.ogg")
+var bgm = preload("res://Music/MM3 - Weapon Get.ogg")
 
 
 # Called when the node enters the scene tree for the first time.

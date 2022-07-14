@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/MM2 - Victory.wav-356c7fd6bdaf8acf0680252603d69c7c.sample"
+path="res://.import/MM2 - Victory.wav-2b9e421aa276f5d34e660706181e2964.sample"
 
 [deps]
 
-source_file="res://Music/BGM/MM2 - Victory.wav"
-dest_files=[ "res://.import/MM2 - Victory.wav-356c7fd6bdaf8acf0680252603d69c7c.sample" ]
+source_file="res://Music/MM2 - Victory.wav"
+dest_files=[ "res://.import/MM2 - Victory.wav-2b9e421aa276f5d34e660706181e2964.sample" ]
 
 [params]
 

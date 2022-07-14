@@ -13,8 +13,6 @@ func _process(_delta):
 		get_tree().change_scene("res://Main Menu/Main Menu.tscn")
 
 
-
-
 func _on_Name_Entry_text_entered(new_text):
 	var entry = {"name" : new_text, "score" : GameVariables.score}
 	GameVariables.add_score(entry)

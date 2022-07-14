@@ -2,7 +2,7 @@ extends Node2D
 
 var progress: float = 0
 
-var bgm = preload("res://Music/BGM/MM2 - Victory.wav")
+var bgm = preload("res://Music/MM2 - Victory.wav")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

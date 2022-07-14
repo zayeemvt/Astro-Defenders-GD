@@ -3,7 +3,7 @@ extends Node2D
 onready var node_list = [$"Selections/Play", $"Selections/Instructions", $"Selections/High Scores",
 				 $"Selections/Settings", $"Selections/Credits", $"Selections/Quit"]
 
-var bgm = preload("res://Music/BGM/MM2 - Password.ogg")
+var bgm = preload("res://Music/MM2 - Password.ogg")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

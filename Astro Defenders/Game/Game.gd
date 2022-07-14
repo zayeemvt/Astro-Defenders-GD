@@ -1,6 +1,6 @@
 extends Node2D
 
-var bgm = preload("res://Music/BGM/MM5 - Gravity Man.ogg")
+var bgm = preload("res://Music/MM5 - Gravity Man.ogg")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
