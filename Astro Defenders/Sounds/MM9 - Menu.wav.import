@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/MM9 - Menu.wav-72d27c74c2a21ffe811c0e2f0c423a4a.sample"
+
+[deps]
+
+source_file="res://Sounds/MM9 - Menu.wav"
+dest_files=[ "res://.import/MM9 - Menu.wav-72d27c74c2a21ffe811c0e2f0c423a4a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

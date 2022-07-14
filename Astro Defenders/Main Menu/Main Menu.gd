@@ -23,13 +23,16 @@ func _process(_delta):
 	
 	if Input.is_action_just_pressed("player_down"):
 		Global.cur_selection = (Global.cur_selection + 1) % 6
+		cursor.get_node("Sound").play()
 	if Input.is_action_just_pressed("player_up"):
 		Global.cur_selection = (Global.cur_selection + 5) % 6
+		cursor.get_node("Sound").play()
 	
 	highlight(node_list[Global.cur_selection])
 	
 	if Input.is_action_just_pressed("player_shoot"):
 		select_option()
+		cursor.get_node("Sound").play()
 
 func highlight(node):
 #	node.add_color_override("font_color", Color(0.20, 0.33, 1, 1))

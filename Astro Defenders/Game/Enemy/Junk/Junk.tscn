@@ -7,8 +7,9 @@
 extents = Vector2( 45, 21 )
 
 [node name="Junk" instance=ExtResource( 3 )]
-scale = Vector2( 0.75, 0.75 )
+scale = Vector2( 0.8, 0.8 )
 base_speed = 100
+max_speed = 165
 score = 50
 
 [node name="Hitbox" parent="." index="0"]

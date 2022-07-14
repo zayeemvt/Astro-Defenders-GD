@@ -37,10 +37,12 @@ func _process(delta):
 			bullet_instance.global_position = $"Laser Point".global_position
 			bullet_instance.direction = Vector2.UP
 			owner.add_child(bullet_instance)
+			bullet_instance.get_node("Sound").play()
 			$"Fire Timer".start()
 
 func hit():
 	lives -= 1
+	$PlayerHit.play()
 	emit_signal("update_lives", lives)
 	if lives == 0:
 		emit_signal("player_dead")

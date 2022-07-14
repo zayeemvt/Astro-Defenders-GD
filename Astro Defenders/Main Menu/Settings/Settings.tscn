@@ -223,3 +223,4 @@ text = "BACK"
 
 [node name="Menu Cursor" parent="." instance=ExtResource( 3 )]
 position = Vector2( 41, 184 )
+frame = 0

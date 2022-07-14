@@ -20,15 +20,16 @@ func _ready():
 	connect("body_entered", self, "_on_Enemy_body_entered")
 
 func _physics_process(delta: float) -> void:
-	var velocity = Vector2.DOWN * speed * delta
-	
-	global_position += velocity
-	
-	# Junk is off-screen
-	if global_position.y > 600 + $Hitbox.shape.extents.y:
-		emit_signal("enemy_despawn", 0)
-		emit_signal("enemy_off_screen")
-		queue_free()
+	if (health > 0):
+		var velocity = Vector2.DOWN * speed * delta
+		
+		global_position += velocity
+		
+		# Junk is off-screen
+		if global_position.y > 600 + $Hitbox.shape.extents.y:
+			emit_signal("enemy_despawn", 0)
+			emit_signal("enemy_off_screen")
+			queue_free()
 	
 	
 
@@ -40,11 +41,15 @@ func hit():
 	health -= 1
 	
 	if health == 0:
+		$EnemyDefeated.play()
 		emit_signal("enemy_despawn", score)
-		queue_free()
+		$Hitbox.set_deferred("disabled", true)
 
 func _on_Enemy_body_entered(body):
 	if body.has_method("hit"):
 		body.hit()
 		queue_free()
 		
+
+func _on_EnemyDefeated_finished():
+	queue_free()

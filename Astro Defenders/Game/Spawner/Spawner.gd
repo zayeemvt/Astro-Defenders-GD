@@ -2,19 +2,19 @@ extends Node2D
 
 var junk = preload("res://Game/Enemy/Junk/Junk.tscn")
 var meteor = preload("res://Game/Enemy/Meteor/Meteor.tscn")
-export (int) var max_enemies = 30
+export (int) var max_enemies = 20
 var enemies_spawned = 0
 var rng = RandomNumberGenerator.new()
 
 var score_thresholds = [0,0,0,0,0,0]
 var cur_threshold = GameVariables.score
 
-var spawn_intervals = [3, 2, 1, 0.5, 0.25, 0.15, 0.10]
+var spawn_intervals = [3, 2, 1, 0.8, 0.6, 0.4, 0.2]
 var difficulty = 0
 var timer_time = spawn_intervals[difficulty]
 
-var meteor_table = [2, 3, 6, 10, 15, 20, 30]
-var meteor_goals = [1, 2, 3, 5, 10, 20]
+var meteor_table = [2, 3, 6, 8, 10, 13, 18]
+var meteor_goals = [1, 2, 3, 5, 8, 13]
 var junk_counter = 0
 
 onready var region = get_node("Spawn Region/CollisionShape2D")
