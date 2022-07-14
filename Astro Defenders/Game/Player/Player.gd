@@ -41,12 +41,14 @@ func _process(delta):
 			$"Fire Timer".start()
 
 func hit():
-	lives -= 1
-	$PlayerHit.play()
-	emit_signal("update_lives", lives)
-	if lives == 0:
-		emit_signal("player_dead")
-		queue_free()
+	if $"Invuln Timer".is_stopped():
+		lives -= 1
+		$PlayerHit.play()
+		emit_signal("update_lives", lives)
+		$"Invuln Timer".start()
+		if lives == 0:
+			emit_signal("player_dead")
+			queue_free()
 
 func _on_Enemy_enemy_off_screen():
 	hit()
