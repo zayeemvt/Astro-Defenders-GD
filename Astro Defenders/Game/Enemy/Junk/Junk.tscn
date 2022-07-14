@@ -1,10 +1,22 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Game/Enemy/Junk/Junk.png" type="Texture" id=2]
 [ext_resource path="res://Game/Enemy/Enemy.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 45, 21 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 89, 42 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ SubResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 0.0
+} ]
 
 [node name="Junk" instance=ExtResource( 3 )]
 scale = Vector2( 0.8, 0.8 )
@@ -16,4 +28,4 @@ score = 50
 shape = SubResource( 1 )
 
 [node name="Sprite" parent="." index="1"]
-texture = ExtResource( 2 )
+frames = SubResource( 3 )

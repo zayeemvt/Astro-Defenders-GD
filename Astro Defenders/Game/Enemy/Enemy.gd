@@ -25,8 +25,14 @@ func _physics_process(delta: float) -> void:
 		
 		global_position += velocity
 		
-		# Junk is off-screen
-		if global_position.y > 600 + $Hitbox.shape.extents.y:
+		# Check if enemy is off-screen
+		var edge
+		if $Hitbox.shape is CircleShape2D:
+			edge = $Hitbox.shape.radius
+		else:
+			edge = $Hitbox.shape.extents.y
+			
+		if global_position.y > 600 + edge:
 			emit_signal("enemy_despawn", 0)
 			emit_signal("enemy_off_screen")
 			queue_free()
