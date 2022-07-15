@@ -3,6 +3,8 @@ extends Node2D
 enum SETTINGS { AUDIO, UP, DOWN, LEFT, RIGHT, SHOOT, BACK }
 enum CONFIG { AUDIO, CONTROL, NONE }
 
+const SETTINGS_FILE = "user://settings.cfg"
+
 onready var node_list = [ [$"Options/Audio/Music", $"Options/Audio/Sound"], 
 						  [$"Options/Up/Key1", $"Options/Up/Key2"], 
 						  [$"Options/Down/Key1", $"Options/Down/Key2"], 
@@ -23,17 +25,66 @@ var cursor_pos = {"x" : 0, "y" : 0}
 var config_state = CONFIG.NONE
 var discard_input = false
 
-var volume = []
-var keybinds = []
+var volume = [] # ints
+var keybinds = [] # InputEvents as 2D array
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	set_process_input(false) # only reactivate when remapping keybinds
 	
-	volume = [100, 100]
+	var config = ConfigFile.new()
+	var err = config.load(SETTINGS_FILE)
+	if err: # Assuming that file is missing, generate default config
+		# Set audio settings
+		volume = [100, 100]
+		config.set_value("audio", "Music", 100)
+		config.set_value("audio", "Sound", 100)
+		
+		# Set keybindings
+		for action in input_actions:
+			keybinds.append(InputMap.get_action_list(action))
+			
+			# Convert to cfg-ready format
+			var action_list = []
+			for key in InputMap.get_action_list(action):
+				# Save keybind as scancode string
+				action_list.append(OS.get_scancode_string(key.scancode))
+			
+			config.set_value("input", action, action_list)
+		config.save(SETTINGS_FILE)
 	
-	for action in input_actions:
-		keybinds.append(InputMap.get_action_list(action))
+	else: # Config file exists
+		# Load audio settings
+		volume = [config.get_value("audio", "Music"), config.get_value("audio", "Sound")]
+		for i in range (node_list[0].size()):
+			node_list[0][i].get_node("Volume").text = str(volume[i]) + "%"
+		
+		# Load keybinds
+		var i = 1
+		var j = 0
+		for action in config.get_section_keys("input"):
+			# Delete old keybinds
+			for old_event in InputMap.get_action_list(action):
+				InputMap.action_erase_event(action, old_event)
+			
+			var inputs = []
+			for key in config.get_value("input", action):
+				# Get the key scancode corresponding to the saved human-readable string
+				var scancode = OS.find_scancode_from_string(key)
+				# Create a new event object based on the saved scancode
+				var event = InputEventKey.new()
+				event.scancode = scancode
+				InputMap.action_add_event(action, event)
+				
+				inputs.append(event)
+				
+				node_list[i][j].text = key
+				j += 1
+			
+			keybinds.append(inputs)
+			
+			i += 1
+			j = 0
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -45,7 +96,18 @@ func _process(_delta):
 			adjust_audio(node_list[cursor_pos.y][cursor_pos.x])
 		CONFIG.CONTROL:
 			pass # wait for input
-	
+
+
+func save_to_config(section, key, value):
+	"""Helper function to redefine a parameter in the settings file"""
+	var config = ConfigFile.new()
+	var err = config.load(SETTINGS_FILE)
+	if err:
+		print("Error code when loading config file: ", err)
+	else:
+		config.set_value(section, key, value)
+		config.save(SETTINGS_FILE)
+
 
 func highlight(node):
 	$"Menu Cursor".position.x = (node.get_parent().rect_position.x + node.rect_position.x) - x_offset
@@ -102,6 +164,8 @@ func adjust_audio(node):
 			node.get_node("Volume").text = str(volume[cursor_pos.x]) + "%"
 	
 	if Input.is_action_just_pressed("player_shoot"):
+		save_to_config("audio", "Music", volume[0])
+		save_to_config("audio", "Sound", volume[1])
 		config_state = CONFIG.NONE
 		cursor.playing = true
 		var db = 20 * log(float(volume[cursor_pos.x])/100) / log(10)
@@ -109,26 +173,40 @@ func adjust_audio(node):
 		AudioServer.set_bus_volume_db(audio_bus_indices[cursor_pos.x], db)
 		cursor.get_node("Sound").play()
 
+# For control remapping
 func _input(event):
 #	if config_state == CONFIG.CONTROL:
+
+	# Prevent the "player_shoot" action from being registered
+	# as the input
 	if discard_input:
 		discard_input = false
-	# Handle the first pressed key
+		
+	# Otherwise, handle the first pressed key
 	elif event is InputEventKey and not event.is_echo():
 		# Register the event as handled and stop polling
 		get_tree().set_input_as_handled()
 		set_process_input(false)
+		
 		# Display the string corresponding to the pressed key
 		var scancode = OS.get_scancode_string(event.scancode)
 		node_list[cursor_pos.y][cursor_pos.x].text = scancode
+		
 		# Start by removing previously key binding(s)
 		var action = input_actions[cursor_pos.y - 1]
 		var old_keybind = keybinds[cursor_pos.y - 1][cursor_pos.x]
 		if old_keybind in InputMap.get_action_list(action):
 			InputMap.action_erase_event(action, old_keybind)
+			
 		# Add the new key binding
 		InputMap.action_add_event(action, event)
-#				save_to_config("input", action, scancode)
+		keybinds[cursor_pos.y - 1][cursor_pos.x] = event
+		
+		var inputs = []
+		for key in keybinds[cursor_pos.y - 1]:
+			inputs.append(OS.get_scancode_string(key.scancode))
+		
+		save_to_config("input", action, inputs)
 		config_state = CONFIG.NONE
 		cursor.playing = true
 		discard_input = true
