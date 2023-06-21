@@ -1,0 +1,26 @@
+res://assets/Cursor/Menu Cursor.tscn::3b1d549615d87cc604f6124f212e9106::1687315811::res://.godot/exported/133200997/export-3ff6287de67e24871880c43fe03c9120-Menu Cursor.scn
+res://assets/Fonts/arcadeclassic36.tres::baace3367760ddbd31a2c4e22fc73855::1687309126::res://.godot/exported/133200997/export-82affb2e502410b2e0c7278577620dc5-arcadeclassic36.res
+res://assets/Fonts/joystix24.tres::1d5bf3caea0e545e007fc3bf24b447ac::1687308525::res://.godot/exported/133200997/export-4678a279f026adac15ab5e0f57df61f2-joystix24.res
+res://assets/Fonts/joystix32.tres::81a108ab51cf5b12f13e61c329be669a::1687308525::res://.godot/exported/133200997/export-ab344b3bd8eb46bbb80a0ada6439a647-joystix32.res
+res://assets/Game_UI.tres::3be49011d3844035f8e50b18a292496a::1687314878::res://.godot/exported/133200997/export-6ff56bcfa5f92bf68e6fca1fca4ad4e0-Game_UI.res
+res://assets/Menu_UI.tres::d586fe979df299db4cdfd6e7f1cd77a6::1687314931::res://.godot/exported/133200997/export-618cbb8f10b268d4ef631a99d234df0d-Menu_UI.res
+res://assets/Menu_UI_Large.tres::2506af9d99ae52c808c02dd67681fa7d::1687314878::res://.godot/exported/133200997/export-456c971a753acd67681018a8b5b2bb39-Menu_UI_Large.res
+res://Game/Bullet/Bullet.tscn::b628aee0a86f266efe1b89065ad4165b::1687315811::res://.godot/exported/133200997/export-29ed15a7f0a227a0eb7a1fe3a6e414ca-Bullet.scn
+res://Game/Enemy/Junk/Junk.tscn::9107009f65ad0839b51decdf370363da::1687313709::res://.godot/exported/133200997/export-8680240c3ef8b4a4d409306f29596709-Junk.scn
+res://Game/Enemy/Meteor/Meteor.tscn::b77a43671b0c8710b8e5ca27a21541ea::1687315811::res://.godot/exported/133200997/export-485c9ad797f17eb1fe47282b138ac146-Meteor.scn
+res://Game/Enemy/Enemy.tscn::d37ef8109e0d256331dba2dea09a36f5::1687308525::res://.godot/exported/133200997/export-8f5c4a56e312389d73d32030e6c4ea82-Enemy.scn
+res://Game/Game HUD/Game HUD.tscn::52bcf671503cc90b24b56bf50f002dd7::1687315812::res://.godot/exported/133200997/export-9efac0830266e8dc98ac1100ab219608-Game HUD.scn
+res://Game/Player/Player.tscn::461acf84c3ac3be4b81914e093007b11::1687313709::res://.godot/exported/133200997/export-ff5e5cd1f136af42cfd15a6d3a94bc77-Player.scn
+res://Game/Spawner/Spawner.tscn::2646a134315809e22107746b3e444a5c::1687313709::res://.godot/exported/133200997/export-0a493bf6c2942a3c78c439ce7b24d094-Spawner.scn
+res://Game/Game.tscn::2db62c8f4bf9611f8aa6e7b1258a4873::1687315811::res://.godot/exported/133200997/export-015fcee914f59389e560071981165e64-Game.scn
+res://Game Over/Game Over.tscn::1e872d13b0cd7b4e209ff78fb88a6250::1687315812::res://.godot/exported/133200997/export-69d70a1811f9833dee80fa07f3480d3f-Game Over.scn
+res://Main Menu/High Scores/High Scores.tscn::0e39b3efc1121661592c4c3bf2f8ee27::1687315811::res://.godot/exported/133200997/export-e6b95e43cd5787fd69c7479772d1541e-High Scores.scn
+res://Main Menu/Settings/Settings.tscn::00f71c913fe73d3bc424f1e36200fcd3::1687315811::res://.godot/exported/133200997/export-cc19f1dc10653eee98141e2e02201c62-Settings.scn
+res://Main Menu/Main Menu.tscn::9fc58e7ba7fb07772387ad5dc842c850::1687315811::res://.godot/exported/133200997/export-8d3c857a3320029833ba483cb09306ec-Main Menu.scn
+res://Music/MusicPlayer.tscn::9c415b7e3ad2ae75d72fe49bd1c4bb58::1687313709::res://.godot/exported/133200997/export-8a5a3769b712d26d4167cd9c5e19e6d8-MusicPlayer.scn
+res://Score Entry/Score Entry.tscn::12c8325e870b452702b7e4aafbd3c98c::1687315812::res://.godot/exported/133200997/export-6fc60729884426d3da0a72878a786f39-Score Entry.scn
+res://Splash/Splash.tscn::5d40ae5cca533844abe6330e5d2613c5::1687315811::res://.godot/exported/133200997/export-43fef6de045fb8ab79dc5925d15f92df-Splash.scn
+res://Default Background.tscn::84728eaaf07488ce6819cd5aa36e5cb2::1687308525::res://.godot/exported/133200997/export-ffd07e19690f605df67530c7de19f9a5-Default Background.scn
+res://default_bus_layout.tres::d1c6445c84ce1bde97406683a7d28f99::1687308525::res://.godot/exported/133200997/export-19246414aa9fb561ced4b8dce477acec-default_bus_layout.res
+res://default_env.tres::1d7dcd35870c6985cce04bf6a0c12da1::1687315812::res://.godot/exported/133200997/export-7cf3fd67ad9f55210191d77b582b8209-default_env.res
+res://Main.tscn::15a16e630d7937c00d7c0e8855752e0f::1687315811::res://.godot/exported/133200997/export-bcb0d2eb5949c52b6a65bfe9de3e985b-Main.scn
