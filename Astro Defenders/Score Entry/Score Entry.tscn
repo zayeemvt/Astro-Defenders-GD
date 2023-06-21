@@ -40,6 +40,7 @@ offset_bottom = 364.0
 theme = ExtResource("4")
 theme_override_styles/normal = SubResource("1")
 theme_override_styles/focus = SubResource("2")
+alignment = 1
 max_length = 10
 context_menu_enabled = false
 shortcut_keys_enabled = false

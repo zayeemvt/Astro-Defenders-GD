@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cmv2v2gm5rfmp" path="res://Game/Player/Player.tscn" id="1"]
 [ext_resource type="PackedScene" uid="uid://mtq4vh2vbkmp" path="res://Game/Spawner/Spawner.tscn" id="2"]
-[ext_resource type="PackedScene" path="res://Game/Game HUD/Game HUD.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://btfwnp0wunwft" path="res://Game/Game HUD/Game HUD.tscn" id="3"]
 [ext_resource type="Script" path="res://Game/Game.gd" id="4"]
 [ext_resource type="PackedScene" path="res://Default Background.tscn" id="5"]
 

@@ -1,28 +1,28 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=4 format=3 uid="uid://btfwnp0wunwft"]
 
-[ext_resource path="res://Game/Player/Player.png" type="Texture2D" id=1]
-[ext_resource path="res://Game/Game HUD/Game HUD.gd" type="Script" id=2]
-[ext_resource path="res://assets/Game_UI.tres" type="Theme" id=3]
+[ext_resource type="Texture2D" uid="uid://m1pu7mo4e6w" path="res://Game/Player/Player.png" id="1"]
+[ext_resource type="Script" path="res://Game/Game HUD/Game HUD.gd" id="2"]
+[ext_resource type="Theme" uid="uid://byyj6qjxbrqom" path="res://assets/Game_UI.tres" id="3"]
 
 [node name="Game HUD" type="Node2D"]
-script = ExtResource( 2 )
+script = ExtResource("2")
 
 [node name="Game Title" type="Label" parent="."]
 offset_left = 32.0
 offset_top = 32.0
 offset_right = 275.0
 offset_bottom = 113.0
-theme = ExtResource( 3 )
+theme = ExtResource("3")
 text = "ASTRO
 Defenders"
-align = 1
+horizontal_alignment = 1
 
 [node name="Score Name" type="Label" parent="."]
 offset_left = 32.0
 offset_top = 216.0
 offset_right = 177.0
 offset_bottom = 258.0
-theme = ExtResource( 3 )
+theme = ExtResource("3")
 text = "Score"
 uppercase = true
 
@@ -31,7 +31,7 @@ offset_left = 102.0
 offset_top = 264.0
 offset_right = 264.0
 offset_bottom = 303.0
-theme = ExtResource( 3 )
+theme = ExtResource("3")
 text = "000000"
 
 [node name="Lives Name" type="Label" parent="."]
@@ -39,23 +39,23 @@ offset_left = 32.0
 offset_top = 400.0
 offset_right = 167.0
 offset_bottom = 439.0
-theme = ExtResource( 3 )
+theme = ExtResource("3")
 text = "Lives"
 uppercase = true
 
 [node name="Lives" type="Node2D" parent="."]
 
 [node name="Life1" type="Sprite2D" parent="Lives"]
-position = Vector2( 117, 471 )
-scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 1 )
+position = Vector2(117, 471)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1")
 
 [node name="Life2" type="Sprite2D" parent="Lives"]
-position = Vector2( 157, 471 )
-scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 1 )
+position = Vector2(157, 471)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1")
 
 [node name="Life3" type="Sprite2D" parent="Lives"]
-position = Vector2( 197, 471 )
-scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 1 )
+position = Vector2(197, 471)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1")
