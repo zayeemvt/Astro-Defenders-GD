@@ -1,86 +1,101 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=10 format=3 uid="uid://chjkj2w0aumv2"]
 
-[ext_resource path="res://Main Menu/Main Menu.gd" type="Script" id=1]
-[ext_resource path="res://assets/Black Background.png" type="Texture" id=2]
-[ext_resource path="res://assets/Menu_UI_Large.tres" type="Theme" id=3]
-[ext_resource path="res://assets/Menu_UI.tres" type="Theme" id=4]
-[ext_resource path="res://assets/Cursor/Menu Cursor.tscn" type="PackedScene" id=5]
+[ext_resource type="Script" path="res://Main Menu/Main Menu.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://dvo57cm464dg3" path="res://assets/Black Background.png" id="2"]
+[ext_resource type="Theme" uid="uid://c8qinsadi7jcy" path="res://assets/Menu_UI_Large.tres" id="3"]
+[ext_resource type="Theme" uid="uid://c8dtrddouh2ks" path="res://assets/Menu_UI.tres" id="4"]
+[ext_resource type="PackedScene" uid="uid://dwbn07v3au846" path="res://assets/Cursor/Menu Cursor.tscn" id="5"]
+[ext_resource type="Texture2D" uid="uid://d25c2yq18vbsq" path="res://assets/Cursor/Menu Cursor.png" id="6_vrukv"]
+
+[sub_resource type="AtlasTexture" id="1"]
+atlas = ExtResource("6_vrukv")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="2"]
+atlas = ExtResource("6_vrukv")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("1")
+}, {
+"duration": 1.0,
+"texture": SubResource("2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
 
 [node name="Main Menu" type="Node2D"]
-script = ExtResource( 1 )
+script = ExtResource("1")
 
-[node name="BlackBackground" type="Sprite" parent="."]
-position = Vector2( 300, 300 )
-texture = ExtResource( 2 )
+[node name="BlackBackground" type="Sprite2D" parent="."]
+position = Vector2(300, 300)
+texture = ExtResource("2")
 
 [node name="Title" type="Label" parent="."]
-margin_left = 139.0
-margin_top = 48.0
-margin_right = 465.0
-margin_bottom = 147.0
-theme = ExtResource( 3 )
+offset_left = 139.0
+offset_top = 48.0
+offset_right = 465.0
+offset_bottom = 147.0
+theme = ExtResource("3")
 text = "ASTRO
 DEFENDERS"
-align = 1
-valign = 1
 clip_text = true
 
 [node name="Selections" type="Node2D" parent="."]
 
 [node name="Play" type="Label" parent="Selections"]
-margin_left = 192.0
-margin_top = 200.0
-margin_right = 600.0
-margin_bottom = 246.0
-theme = ExtResource( 4 )
+offset_left = 192.0
+offset_top = 200.0
+offset_right = 600.0
+offset_bottom = 246.0
+theme = ExtResource("4")
 text = "PLAY"
-valign = 1
 
 [node name="Instructions" type="Label" parent="Selections"]
-margin_left = 192.0
-margin_top = 260.0
-margin_right = 600.0
-margin_bottom = 306.0
-theme = ExtResource( 4 )
+offset_left = 192.0
+offset_top = 260.0
+offset_right = 600.0
+offset_bottom = 306.0
+theme = ExtResource("4")
 text = "INSTRUCTIONS"
-valign = 1
 
 [node name="High Scores" type="Label" parent="Selections"]
-margin_left = 192.0
-margin_top = 320.0
-margin_right = 600.0
-margin_bottom = 366.0
-theme = ExtResource( 4 )
+offset_left = 192.0
+offset_top = 320.0
+offset_right = 600.0
+offset_bottom = 366.0
+theme = ExtResource("4")
 text = "HIGH SCORES"
-valign = 1
 
 [node name="Settings" type="Label" parent="Selections"]
-margin_left = 192.0
-margin_top = 380.0
-margin_right = 600.0
-margin_bottom = 426.0
-theme = ExtResource( 4 )
+offset_left = 192.0
+offset_top = 380.0
+offset_right = 600.0
+offset_bottom = 426.0
+theme = ExtResource("4")
 text = "SETTINGS"
-valign = 1
 
 [node name="Credits" type="Label" parent="Selections"]
-margin_left = 192.0
-margin_top = 440.0
-margin_right = 600.0
-margin_bottom = 486.0
-theme = ExtResource( 4 )
+offset_left = 192.0
+offset_top = 440.0
+offset_right = 600.0
+offset_bottom = 486.0
+theme = ExtResource("4")
 text = "CREDITS"
-valign = 1
 
 [node name="Quit" type="Label" parent="Selections"]
-margin_left = 192.0
-margin_top = 500.0
-margin_right = 600.0
-margin_bottom = 546.0
-theme = ExtResource( 4 )
+offset_left = 192.0
+offset_top = 500.0
+offset_right = 600.0
+offset_bottom = 546.0
+theme = ExtResource("4")
 text = "EXIT"
-valign = 1
 
-[node name="Menu Cursor" parent="." instance=ExtResource( 5 )]
-position = Vector2( 168, 224 )
-frame = 0
+[node name="Menu Cursor" parent="." instance=ExtResource("5")]
+position = Vector2(168, 215)
+sprite_frames = SubResource("3")

@@ -1,31 +1,39 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=6 format=3 uid="uid://jysoek2npky1"]
 
-[ext_resource path="res://Game/Enemy/Junk/Junk.png" type="Texture" id=2]
-[ext_resource path="res://Game/Enemy/Enemy.tscn" type="PackedScene" id=3]
+[ext_resource type="Texture2D" uid="uid://dxvafyxte2w8x" path="res://Game/Enemy/Junk/Junk.png" id="2"]
+[ext_resource type="PackedScene" path="res://Game/Enemy/Enemy.tscn" id="3"]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 45, 21 )
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(80, 40)
 
-[sub_resource type="AtlasTexture" id=2]
-atlas = ExtResource( 2 )
-region = Rect2( 0, 0, 89, 42 )
+[sub_resource type="AtlasTexture" id="2"]
+atlas = ExtResource("2")
+region = Rect2(0, 0, 89, 42)
 
-[sub_resource type="SpriteFrames" id=3]
-animations = [ {
-"frames": [ SubResource( 2 ) ],
+[sub_resource type="SpriteFrames" id="3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("2")
+}],
 "loop": true,
-"name": "default",
+"name": &"default",
 "speed": 0.0
-} ]
+}]
 
-[node name="Junk" instance=ExtResource( 3 )]
-scale = Vector2( 0.8, 0.8 )
+[node name="Junk" instance=ExtResource("3")]
+scale = Vector2(0.8, 0.8)
 base_speed = 100
 max_speed = 165
 score = 50
 
 [node name="Hitbox" parent="." index="0"]
-shape = SubResource( 1 )
+position = Vector2(-1.78814e-06, 0)
+scale = Vector2(0.999999, 0.999999)
+shape = SubResource("1")
 
-[node name="Sprite" parent="." index="1"]
-frames = SubResource( 3 )
+[node name="Sprite2D" parent="." index="1"]
+sprite_frames = SubResource("3")
+
+[node name="EnemyDefeated" parent="." index="2"]
+bus = &"Sound"

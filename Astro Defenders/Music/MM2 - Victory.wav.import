@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/MM2 - Victory.wav-2b9e421aa276f5d34e660706181e2964.sample"
+type="AudioStreamWAV"
+uid="uid://dwd3qv213o3bw"
+path="res://.godot/imported/MM2 - Victory.wav-2b9e421aa276f5d34e660706181e2964.sample"
 
 [deps]
 
 source_file="res://Music/MM2 - Victory.wav"
-dest_files=[ "res://.import/MM2 - Victory.wav-2b9e421aa276f5d34e660706181e2964.sample" ]
+dest_files=["res://.godot/imported/MM2 - Victory.wav-2b9e421aa276f5d34e660706181e2964.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

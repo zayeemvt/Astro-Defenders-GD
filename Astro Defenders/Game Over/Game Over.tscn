@@ -1,30 +1,28 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=4 format=3 uid="uid://qs6mh7ead76j"]
 
-[ext_resource path="res://assets/Black Background.png" type="Texture" id=1]
-[ext_resource path="res://assets/Menu_UI_Large.tres" type="Theme" id=2]
-[ext_resource path="res://Game Over/Game Over.gd" type="Script" id=3]
+[ext_resource type="Texture2D" uid="uid://dvo57cm464dg3" path="res://assets/Black Background.png" id="1"]
+[ext_resource type="Theme" uid="uid://c8qinsadi7jcy" path="res://assets/Menu_UI_Large.tres" id="2"]
+[ext_resource type="Script" path="res://Game Over/Game Over.gd" id="3"]
 
 [node name="Game Over" type="Node2D"]
-script = ExtResource( 3 )
+script = ExtResource("3")
 
-[node name="BlackBackground" type="Sprite" parent="."]
-position = Vector2( 300, 300 )
-texture = ExtResource( 1 )
+[node name="BlackBackground" type="Sprite2D" parent="."]
+position = Vector2(300, 300)
+texture = ExtResource("1")
 
 [node name="Screen Label" type="Label" parent="."]
-margin_top = 182.0
-margin_right = 600.0
-margin_bottom = 230.0
-theme = ExtResource( 2 )
+offset_top = 182.0
+offset_right = 600.0
+offset_bottom = 230.0
+theme = ExtResource("2")
 text = "GAME OVER"
-align = 1
-valign = 1
+horizontal_alignment = 1
 
 [node name="Score" type="Label" parent="."]
-margin_top = 304.0
-margin_right = 600.0
-margin_bottom = 352.0
-theme = ExtResource( 2 )
+offset_top = 304.0
+offset_right = 600.0
+offset_bottom = 352.0
+theme = ExtResource("2")
 text = "000000"
-align = 1
-valign = 1
+horizontal_alignment = 1

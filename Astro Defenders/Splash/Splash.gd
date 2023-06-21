@@ -30,4 +30,4 @@ func _process(_delta):
 
 func _on_Timer_timeout():
 	MusicPlayer.stop()
-	get_tree().change_scene("res://Main Menu/Main Menu.tscn")
+	get_tree().change_scene_to_file("res://Main Menu/Main Menu.tscn")

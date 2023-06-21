@@ -14,6 +14,6 @@ func _ready():
 func _process(_delta):
 	if (Input.is_action_just_pressed("player_shoot")):
 		if (GameVariables.check_score()):
-			get_tree().change_scene("res://Score Entry/Score Entry.tscn")
+			get_tree().change_scene_to_file("res://Score Entry/Score Entry.tscn")
 		else:
-			get_tree().change_scene("res://Main Menu/Main Menu.tscn")
+			get_tree().change_scene_to_file("res://Main Menu/Main Menu.tscn")

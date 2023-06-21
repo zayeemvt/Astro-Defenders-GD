@@ -1,15 +1,19 @@
 [remap]
 
-importer="ogg_vorbis"
-type="AudioStreamOGGVorbis"
-path="res://.import/MM3 - Weapon Get.ogg-bf853143308ea1cfea93fb64b4dd1dc2.oggstr"
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dhmuhtktbkomb"
+path="res://.godot/imported/MM3 - Weapon Get.ogg-bf853143308ea1cfea93fb64b4dd1dc2.oggvorbisstr"
 
 [deps]
 
 source_file="res://Music/MM3 - Weapon Get.ogg"
-dest_files=[ "res://.import/MM3 - Weapon Get.ogg-bf853143308ea1cfea93fb64b4dd1dc2.oggstr" ]
+dest_files=["res://.godot/imported/MM3 - Weapon Get.ogg-bf853143308ea1cfea93fb64b4dd1dc2.oggvorbisstr"]
 
 [params]
 
 loop=true
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,12 +1,12 @@
 extends Area2D
 class_name Enemy
 
-export (int) var base_speed = 50
-export (int) var max_speed = 200
-export (int) var score = 500
+@export var base_speed: int = 50
+@export var max_speed: int = 200
+@export var score: int = 500
 var speed = base_speed
 
-export (int) var health = 1
+@export var health: int = 1
 
 signal enemy_despawn
 signal enemy_off_screen
@@ -17,7 +17,7 @@ func _ready():
 	rng.randomize()
 	speed = rng.randi_range(base_speed, max_speed)
 	
-	connect("body_entered", self, "_on_Enemy_body_entered")
+	connect("body_entered", Callable(self, "_on_Enemy_body_entered"))
 
 func _physics_process(delta: float) -> void:
 	if (health > 0):
@@ -30,7 +30,7 @@ func _physics_process(delta: float) -> void:
 		if $Hitbox.shape is CircleShape2D:
 			edge = $Hitbox.shape.radius
 		else:
-			edge = $Hitbox.shape.extents.y
+			edge = $Hitbox.shape.size.y
 			
 		if global_position.y > 600 + edge:
 			emit_signal("enemy_despawn", 0)

@@ -18,10 +18,8 @@ func _on_Player_update_lives(lives):
 	match lives:
 		0:
 			$Lives/Life1.hide()
-			continue
 		1:
 			$Lives/Life2.hide()
-			continue
 		2:
 			$Lives/Life3.hide()
 	

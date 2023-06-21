@@ -1,7 +1,7 @@
-extends KinematicBody2D
+extends CharacterBody2D
 class_name Player
 
-export (int) var speed = 350
+@export var speed: int = 350
 
 var bullet = preload("res://Game/Bullet/Bullet.tscn")
 var lives
@@ -27,13 +27,14 @@ func _physics_process(delta: float) -> void:
 		movement_direction.x = 1
 		
 	movement_direction = movement_direction.normalized()
-	move_and_slide(movement_direction * speed)
+	set_velocity(movement_direction * speed)
+	move_and_slide()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if Input.is_action_pressed("player_shoot"):
 		if $"Fire Timer".is_stopped():
-			var bullet_instance = bullet.instance()
+			var bullet_instance = bullet.instantiate()
 			bullet_instance.global_position = $"Laser Point".global_position
 			bullet_instance.direction = Vector2.UP
 			owner.add_child(bullet_instance)

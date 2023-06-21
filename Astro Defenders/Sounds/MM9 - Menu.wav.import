@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/MM9 - Menu.wav-72d27c74c2a21ffe811c0e2f0c423a4a.sample"
+type="AudioStreamWAV"
+uid="uid://uakckqspmfkx"
+path="res://.godot/imported/MM9 - Menu.wav-72d27c74c2a21ffe811c0e2f0c423a4a.sample"
 
 [deps]
 
 source_file="res://Sounds/MM9 - Menu.wav"
-dest_files=[ "res://.import/MM9 - Menu.wav-72d27c74c2a21ffe811c0e2f0c423a4a.sample" ]
+dest_files=["res://.godot/imported/MM9 - Menu.wav-72d27c74c2a21ffe811c0e2f0c423a4a.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

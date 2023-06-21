@@ -1,15 +1,19 @@
 [remap]
 
-importer="ogg_vorbis"
-type="AudioStreamOGGVorbis"
-path="res://.import/MM5 - Gravity Man.ogg-7e0dfbcabfc42f4da117d8e66e07653a.oggstr"
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b40gex1hxgyxg"
+path="res://.godot/imported/MM5 - Gravity Man.ogg-7e0dfbcabfc42f4da117d8e66e07653a.oggvorbisstr"
 
 [deps]
 
 source_file="res://Music/MM5 - Gravity Man.ogg"
-dest_files=[ "res://.import/MM5 - Gravity Man.ogg-7e0dfbcabfc42f4da117d8e66e07653a.oggstr" ]
+dest_files=["res://.godot/imported/MM5 - Gravity Man.ogg-7e0dfbcabfc42f4da117d8e66e07653a.oggvorbisstr"]
 
 [params]
 
 loop=true
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

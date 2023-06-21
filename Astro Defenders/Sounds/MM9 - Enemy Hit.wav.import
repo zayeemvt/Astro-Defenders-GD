@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/MM9 - Enemy Hit.wav-ac56ef6dd76527eb78640e7f6cd1c09d.sample"
+type="AudioStreamWAV"
+uid="uid://bv4asru02bj2s"
+path="res://.godot/imported/MM9 - Enemy Hit.wav-ac56ef6dd76527eb78640e7f6cd1c09d.sample"
 
 [deps]
 
 source_file="res://Sounds/MM9 - Enemy Hit.wav"
-dest_files=[ "res://.import/MM9 - Enemy Hit.wav-ac56ef6dd76527eb78640e7f6cd1c09d.sample" ]
+dest_files=["res://.godot/imported/MM9 - Enemy Hit.wav-ac56ef6dd76527eb78640e7f6cd1c09d.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

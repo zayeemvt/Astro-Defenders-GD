@@ -1,10 +1,10 @@
 extends Node2D
 
-onready var node_list = [$"Selections/Play", $"Selections/Instructions", $"Selections/High Scores",
+@onready var node_list = [$"Selections/Play", $"Selections/Instructions", $"Selections/High Scores",
 				 $"Selections/Settings", $"Selections/Credits", $"Selections/Quit"]
-onready var cursor = $"Menu Cursor"
+@onready var cursor = $"Menu Cursor"
 
-onready var offset = int(node_list[0].rect_size.y / 2)
+@onready var offset = int(node_list[0].size.y / 2)
 
 var bgm = preload("res://Music/MM2 - Password.ogg")
 
@@ -22,10 +22,10 @@ func _process(_delta):
 #	unhighlight(node_list[Global.cur_selection])
 	
 	if Input.is_action_just_pressed("player_down"):
-		Global.cur_selection = (Global.cur_selection + 1) % 6
+		Global.cur_selection = ((Global.cur_selection + 1) % 6) as Global.MENU_OPTIONS
 		cursor.get_node("Sound").play()
 	if Input.is_action_just_pressed("player_up"):
-		Global.cur_selection = (Global.cur_selection + 5) % 6
+		Global.cur_selection = ((Global.cur_selection + 5) % 6) as Global.MENU_OPTIONS
 		cursor.get_node("Sound").play()
 	
 	highlight(node_list[Global.cur_selection])
@@ -36,23 +36,23 @@ func _process(_delta):
 
 func highlight(node):
 #	node.add_color_override("font_color", Color(0.20, 0.33, 1, 1))
-	$"Menu Cursor".position.y = node.rect_position.y + offset
+	$"Menu Cursor".position.y = node.position.y + offset
 
-func unhighlight(node):
-#	node.add_color_override("font_color", Color(1, 1, 1, 1))
-	pass
+#func unhighlight(node):
+##	node.add_color_override("font_color", Color(1, 1, 1, 1))
+#	pass
 
 func select_option():
 	match Global.cur_selection:
 		Global.MENU_OPTIONS.PLAY:
 			Global.menu = false
-			get_tree().change_scene("res://Game/Game.tscn")
+			get_tree().change_scene_to_file("res://Game/Game.tscn")
 		Global.MENU_OPTIONS.INSTRUCTIONS:
 			pass
 		Global.MENU_OPTIONS.HIGH_SCORES:
-			get_tree().change_scene("res://Main Menu/High Scores/High Scores.tscn")
+			get_tree().change_scene_to_file("res://Main Menu/High Scores/High Scores.tscn")
 		Global.MENU_OPTIONS.SETTINGS:
-			get_tree().change_scene("res://Main Menu/Settings/Settings.tscn")
+			get_tree().change_scene_to_file("res://Main Menu/Settings/Settings.tscn")
 		Global.MENU_OPTIONS.CREDITS:
 			pass
 		Global.MENU_OPTIONS.QUIT:

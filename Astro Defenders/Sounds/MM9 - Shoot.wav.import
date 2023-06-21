@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/MM9 - Shoot.wav-ad64decbfe2a7a9de594819376e3d287.sample"
+type="AudioStreamWAV"
+uid="uid://b5eudmyuiot81"
+path="res://.godot/imported/MM9 - Shoot.wav-ad64decbfe2a7a9de594819376e3d287.sample"
 
 [deps]
 
 source_file="res://Sounds/MM9 - Shoot.wav"
-dest_files=[ "res://.import/MM9 - Shoot.wav-ad64decbfe2a7a9de594819376e3d287.sample" ]
+dest_files=["res://.godot/imported/MM9 - Shoot.wav-ad64decbfe2a7a9de594819376e3d287.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

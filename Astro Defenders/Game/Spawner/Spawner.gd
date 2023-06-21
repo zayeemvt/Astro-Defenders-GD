@@ -2,7 +2,7 @@ extends Node2D
 
 var junk = preload("res://Game/Enemy/Junk/Junk.tscn")
 var meteor = preload("res://Game/Enemy/Meteor/Meteor.tscn")
-export (int) var max_enemies = 20
+@export var max_enemies: int = 20
 var enemies_spawned = 0
 var rng = RandomNumberGenerator.new()
 
@@ -17,9 +17,9 @@ var meteor_table = [2, 3, 6, 8, 10, 13, 18]
 var meteor_goals = [1, 2, 3, 5, 8, 13]
 var junk_counter = 0
 
-onready var region = get_node("Spawn Region/CollisionShape2D")
-onready var center = region.position
-onready var size = region.shape.extents
+@onready var region = get_node("Spawn Region/CollisionShape2D")
+@onready var center = region.position
+@onready var size = region.shape.size
 
 signal update_score
 signal enemy_off_screen
@@ -29,8 +29,8 @@ func _ready():
 	rng.randomize()
 	$Timer.start(timer_time)
 	
-	var junk_data = junk.instance()
-	var meteor_data = meteor.instance()
+	var junk_data = junk.instantiate()
+	var meteor_data = meteor.instantiate()
 
 	var junk_score = junk_data.score
 	var meteor_score = meteor_data.score
@@ -55,11 +55,11 @@ func _on_Timer_timeout():
 			enemy = junk
 			junk_counter += 1
 		
-		var enemy_instance = enemy.instance()
+		var enemy_instance = enemy.instantiate()
 		var spawn_point = rng.randi_range(-size.x, size.x) + center.x
 		enemy_instance.position = Vector2(spawn_point, center.y)
-		enemy_instance.connect("enemy_despawn", self, "_on_Enemy_enemy_despawn")
-		enemy_instance.connect("enemy_off_screen", self, "_on_Enemy_enemy_off_screen")
+		enemy_instance.connect("enemy_despawn", Callable(self, "_on_Enemy_enemy_despawn"))
+		enemy_instance.connect("enemy_off_screen", Callable(self, "_on_Enemy_enemy_off_screen"))
 		enemies_spawned += 1
 		add_child(enemy_instance)
 	

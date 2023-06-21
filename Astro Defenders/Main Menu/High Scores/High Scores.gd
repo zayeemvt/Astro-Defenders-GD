@@ -20,4 +20,4 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	if (Input.is_action_just_pressed("player_shoot")):
-		get_tree().change_scene("res://Main Menu/Main Menu.tscn")
+		get_tree().change_scene_to_file("res://Main Menu/Main Menu.tscn")

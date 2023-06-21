@@ -5,19 +5,19 @@ enum CONFIG { AUDIO, CONTROL, NONE }
 
 const SETTINGS_FILE = "user://settings.cfg"
 
-onready var node_list = [ [$"Options/Audio/Music", $"Options/Audio/Sound"], 
+@onready var node_list = [ [$"Options/Audio/Music", $"Options/Audio/Sound"], 
 						  [$"Options/Up/Key1", $"Options/Up/Key2"], 
 						  [$"Options/Down/Key1", $"Options/Down/Key2"], 
 						  [$"Options/Left/Key1", $"Options/Left/Key2"], 
 						  [$"Options/Right/Key1", $"Options/Right/Key2"], 
 						  [$"Options/Shoot/Key1", $"Options/Shoot/Key2"], 
 						  [$"Options/Back/Action", $"Options/Back/Action"]]
-onready var cursor = $"Menu Cursor"
+@onready var cursor = $"Menu Cursor"
 
-onready var x_offset = int(cursor.frames.get_frame("default", 0).get_size().x / 2)
-onready var y_offset = int(node_list[0][0].rect_size.y / 2)
+@onready var x_offset = int(cursor.sprite_frames.get_frame_texture("default", 0).get_size().x / 2)
+@onready var y_offset = int(node_list[0][0].size.y / 2)
 
-onready var audio_bus_indices = [AudioServer.get_bus_index("Music"), AudioServer.get_bus_index("Sound")]
+@onready var audio_bus_indices = [AudioServer.get_bus_index("Music"), AudioServer.get_bus_index("Sound")]
 
 const input_actions = [ "player_up", "player_down", "player_left", "player_right", "player_shoot"]
 
@@ -42,13 +42,13 @@ func _ready():
 		
 		# Set keybindings
 		for action in input_actions:
-			keybinds.append(InputMap.get_action_list(action))
+			keybinds.append(InputMap.action_get_events(action))
 			
 			# Convert to cfg-ready format
 			var action_list = []
-			for key in InputMap.get_action_list(action):
+			for key in InputMap.action_get_events(action):
 				# Save keybind as scancode string
-				action_list.append(OS.get_scancode_string(key.scancode))
+				action_list.append(OS.get_keycode_string(key.keycode))
 			
 			config.set_value("input", action, action_list)
 		config.save(SETTINGS_FILE)
@@ -64,16 +64,16 @@ func _ready():
 		var j = 0
 		for action in config.get_section_keys("input"):
 			# Delete old keybinds
-			for old_event in InputMap.get_action_list(action):
+			for old_event in InputMap.action_get_events(action):
 				InputMap.action_erase_event(action, old_event)
 			
 			var inputs = []
 			for key in config.get_value("input", action):
 				# Get the key scancode corresponding to the saved human-readable string
-				var scancode = OS.find_scancode_from_string(key)
+				var keycode = OS.find_keycode_from_string(key)
 				# Create a new event object based on the saved scancode
 				var event = InputEventKey.new()
-				event.scancode = scancode
+				event.keycode = keycode
 				InputMap.action_add_event(action, event)
 				
 				inputs.append(event)
@@ -110,8 +110,8 @@ func save_to_config(section, key, value):
 
 
 func highlight(node):
-	$"Menu Cursor".position.x = (node.get_parent().rect_position.x + node.rect_position.x) - x_offset
-	$"Menu Cursor".position.y = node.get_parent().rect_position.y + y_offset
+	$"Menu Cursor".position.x = (node.get_parent().position.x + node.position.x) - x_offset
+	$"Menu Cursor".position.y = node.get_parent().position.y + y_offset
 
 
 func move_cursor():
@@ -139,10 +139,9 @@ func move_cursor():
 
 func select_option():	
 	if (cursor_pos.y == SETTINGS.BACK):
-		get_tree().change_scene("res://Main Menu/Main Menu.tscn")
+		get_tree().change_scene_to_file("res://Main Menu/Main Menu.tscn")
 	else:
-		cursor.playing = false
-		cursor.frame = 0
+		cursor.stop()
 		
 		if (cursor_pos.y == SETTINGS.AUDIO):
 			config_state = CONFIG.AUDIO
@@ -167,7 +166,7 @@ func adjust_audio(node):
 		save_to_config("audio", "Music", volume[0])
 		save_to_config("audio", "Sound", volume[1])
 		config_state = CONFIG.NONE
-		cursor.playing = true
+		cursor.play("default")
 		var db = 20 * log(float(volume[cursor_pos.x])/100) / log(10)
 		db = clamp(db, -60, 0)
 		AudioServer.set_bus_volume_db(audio_bus_indices[cursor_pos.x], db)
@@ -185,17 +184,17 @@ func _input(event):
 	# Otherwise, handle the first pressed key
 	elif event is InputEventKey and not event.is_echo():
 		# Register the event as handled and stop polling
-		get_tree().set_input_as_handled()
+		get_viewport().set_input_as_handled()
 		set_process_input(false)
 		
 		# Display the string corresponding to the pressed key
-		var scancode = OS.get_scancode_string(event.scancode)
-		node_list[cursor_pos.y][cursor_pos.x].text = scancode
+		var keycode = OS.get_keycode_string(event.keycode)
+		node_list[cursor_pos.y][cursor_pos.x].text = keycode
 		
 		# Start by removing previously key binding(s)
 		var action = input_actions[cursor_pos.y - 1]
 		var old_keybind = keybinds[cursor_pos.y - 1][cursor_pos.x]
-		if old_keybind in InputMap.get_action_list(action):
+		if old_keybind in InputMap.action_get_events(action):
 			InputMap.action_erase_event(action, old_keybind)
 			
 		# Add the new key binding
@@ -204,9 +203,9 @@ func _input(event):
 		
 		var inputs = []
 		for key in keybinds[cursor_pos.y - 1]:
-			inputs.append(OS.get_scancode_string(key.scancode))
+			inputs.append(OS.get_keycode_string(key.keycode))
 		
 		save_to_config("input", action, inputs)
 		config_state = CONFIG.NONE
-		cursor.playing = true
+		cursor.play("default")
 		discard_input = true
