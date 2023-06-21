@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" path="res://Game/Enemy/Enemy.tscn" id="2"]
 
 [sub_resource type="CircleShape2D" id="8"]
-radius = 32.0
+radius = 33.0
 
 [sub_resource type="AtlasTexture" id="2"]
 atlas = ExtResource("1")

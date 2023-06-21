@@ -1,29 +1,15 @@
 res://default_env.tres
-res://Splash/Splash.tscn
-res://Main.tscn
-res://assets/Fonts/arcadeclassic36.tres
+res://Game/Enemy/Meteor/Meteor.tscn
 res://assets/Game_UI.tres
-res://assets/Menu_UI.tres
-res://assets/Menu_UI_Large.tres
-res://GameVariables.gd
+res://Main.tscn
+res://Splash/Splash.tscn
 res://Main Menu/Main Menu.tscn
-res://Main Menu/Main Menu.gd
 res://Main Menu/Settings/Settings.tscn
 res://Main Menu/High Scores/High Scores.tscn
-res://Main Menu/Settings/Settings.gd
 res://assets/Cursor/Menu Cursor.tscn
-res://Game/Game.tscn
-res://Game/Enemy/Enemy.gd
-res://Game/Bullet/Bullet.gd
-res://Game/Game HUD/Game HUD.gd
-res://Game/Player/Player.gd
-res://Game/Spawner/Spawner.gd
-res://Game/Enemy/Meteor/Meteor.tscn
 res://Game/Bullet/Bullet.tscn
-res://Game/Spawner/Spawner.tscn
-res://Game/Enemy/Junk/Junk.tscn
-res://Game/Player/Player.tscn
-res://Game Over/Game Over.tscn
-res://Music/MusicPlayer.tscn
-res://Score Entry/Score Entry.tscn
+res://Game/Game.tscn
 res://Game/Game HUD/Game HUD.tscn
+res://Game Over/Game Over.tscn
+res://Score Entry/Score Entry.tscn
+res://Game/Player/Player.tscn

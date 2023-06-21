@@ -1,84 +1,85 @@
 2a60927148abd1d33b818b535e306557
-::res://::1687308536
+::res://::1687317680
 Default Background.tscn::PackedScene::-1::1687308525::0::1::::<><>::res://assets/Black Background.png
 default_bus_layout.tres::AudioBusLayout::-1::1687308525::0::1::::<><>::
-default_env.tres::Environment::-1::1687308525::0::1::::<><>::
-GameVariables.gd::GDScript::-1::1687308525::0::1::::<>Node<>::
+default_env.tres::Environment::5141190490701182148::1687317405::0::1::::<><>::
+export_presets.cfg::TextFile::-1::1687316412::0::1::::<><>::
+GameVariables.gd::GDScript::-1::1687310808::0::1::::<>Node<>::
 Global.gd::GDScript::-1::1687308525::0::1::::<>Node<>::
 icon.png::CompressedTexture2D::3038634645869962857::1687308472::1687308550::1::::<><>::
-Main.tscn::PackedScene::-1::1687308525::0::1::::<><>::res://Splash/Splash.tscn
-::res://assets/::1687308472
+Main.tscn::PackedScene::2452389887713438323::1687317405::0::1::::<><>::uid://d3njd47hmde3c
+::res://assets/::1687314931
 Black Background.png::CompressedTexture2D::8664007836167321196::1687308472::1687308550::1::::<><>::
-Game_UI.tres::Theme::-1::1687308525::0::1::::<><>::res://assets/Fonts/joystix/joystix monospace.ttf
-Menu_UI.tres::Theme::-1::1687308525::0::1::::<><>::res://assets/Fonts/joystix/joystix monospace.ttf
-Menu_UI_Large.tres::Theme::-1::1687308525::0::1::::<><>::res://assets/Fonts/joystix/joystix monospace.ttf
-::res://assets/Cursor/::1687308472
+Game_UI.tres::Theme::4121100664973143136::1687314878::0::1::::<><>::uid://xbx53y8wod6a
+Menu_UI.tres::Theme::7096450484929989194::1687314931::0::1::::<><>::uid://bctsjsslw8h7h
+Menu_UI_Large.tres::Theme::7122613148337690336::1687314878::0::1::::<><>::uid://bctsjsslw8h7h
+::res://assets/Cursor/::1687315811
 Menu Cursor.png::CompressedTexture2D::9116463098852457328::1687308472::1687308550::1::::<><>::
-Menu Cursor.tscn::PackedScene::-1::1687308525::0::1::::<><>::res://assets/Cursor/Menu Cursor.png<>res://Sounds/MM9 - Menu.wav
-::res://assets/Fonts/::1687308472
-arcadeclassic36.tres::FontFile::-1::1687308525::0::1::::<><>::res://assets/Fonts/arcadeclassic/ARCADECLASSIC.TTF
+Menu Cursor.tscn::PackedScene::8706316669084776285::1687315811::0::1::::<><>::uid://d25c2yq18vbsq<>uid://uakckqspmfkx
+::res://assets/Fonts/::1687309126
+arcadeclassic36.tres::FontFile::1603814374767761823::1687309126::0::1::::<><>::uid://xbx53y8wod6a
 joystix24.tres::FontFile::-1::1687308525::0::1::::<><>::res://assets/Fonts/joystix/joystix monospace.ttf
 joystix32.tres::FontFile::-1::1687308525::0::1::::<><>::res://assets/Fonts/joystix/joystix monospace.ttf
-::res://assets/Fonts/arcadeclassic/::1687308472
-ARCADECLASSIC.TTF::FontFile::1617859355338013338::1687308472::1687308550::1::::<><>::
+::res://assets/Fonts/arcadeclassic/::1687309001
+ARCADECLASSIC.TTF::FontFile::1617859355338013338::1687308472::1687309001::1::::<><>::
 pizzadudedotdk.txt::TextFile::-1::1687308472::0::1::::<><>::
-::res://assets/Fonts/joystix/::1687308472
-joystix monospace.ttf::FontFile::2567131500068519339::1687308472::1687308550::1::::<><>::
-::res://Game/::1687308472
+::res://assets/Fonts/joystix/::1687309010
+joystix monospace.ttf::FontFile::2567131500068519339::1687308472::1687309010::1::::<><>::
+::res://Game/::1687315811
 Game.gd::GDScript::-1::1687308525::0::1::::<>Node2D<>::
-Game.tscn::PackedScene::-1::1687308525::0::1::::<><>::res://Game/Player/Player.tscn<>res://Game/Spawner/Spawner.tscn<>res://Game/Game HUD/Game HUD.tscn<>res://Game/Game.gd<>res://Default Background.tscn
-::res://Game/Bullet/::1687308472
-Bullet.gd::GDScript::-1::1687308525::0::1::::<>Area2D<>::
+Game.tscn::PackedScene::8698395473389476128::1687315811::0::1::::<><>::uid://cmv2v2gm5rfmp<>uid://mtq4vh2vbkmp<>uid://btfwnp0wunwft<>res://Game/Game.gd<>res://Default Background.tscn
+::res://Game/Bullet/::1687315811
+Bullet.gd::GDScript::-1::1687311637::0::1::::<>Area2D<>::
 Bullet.png::CompressedTexture2D::283397404066600214::1687308472::1687308550::1::::<><>::
-Bullet.tscn::PackedScene::-1::1687308525::0::1::::<><>::res://Game/Bullet/Bullet.png<>res://Game/Bullet/Bullet.gd<>res://Sounds/MM9 - Shoot.wav
-::res://Game/Enemy/::1687308472
-Enemy.gd::GDScript::-1::1687308525::0::1::::Enemy<>Area2D<>::
+Bullet.tscn::PackedScene::8719332457480599265::1687315811::0::1::::<><>::uid://ebjrp88ayqyg<>res://Game/Bullet/Bullet.gd<>uid://b5eudmyuiot81
+::res://Game/Enemy/::1687311628
+Enemy.gd::GDScript::-1::1687311628::0::1::::Enemy<>Area2D<>::
 Enemy.tscn::PackedScene::-1::1687308525::0::1::::<><>::res://Game/Enemy/Enemy.gd<>res://Sounds/MM9 - Enemy Hit.wav
-::res://Game/Enemy/Junk/::1687308472
+::res://Game/Enemy/Junk/::1687313709
 Junk.gd::GDScript::-1::1687308525::0::1::::<>Enemy<>::
 Junk.png::CompressedTexture2D::8816967613519438985::1687308472::1687308550::1::::<><>::
-Junk.tscn::PackedScene::-1::1687308525::0::1::::<><>::res://Game/Enemy/Junk/Junk.png<>res://Game/Enemy/Enemy.tscn
-::res://Game/Enemy/Meteor/::1687308472
+Junk.tscn::PackedScene::682362792610366490::1687313709::0::1::::<><>::uid://dxvafyxte2w8x<>res://Game/Enemy/Enemy.tscn
+::res://Game/Enemy/Meteor/::1687315811
 Meteor.png::CompressedTexture2D::4051499773972048146::1687308472::1687308550::1::::<><>::
-Meteor.tscn::PackedScene::-1::1687308525::0::1::::<><>::res://Game/Enemy/Meteor/Meteor.png<>res://Game/Enemy/Enemy.tscn
-::res://Game/Game HUD/::1687308472
-Game HUD.gd::GDScript::-1::1687308525::0::1::::<>Node2D<>::
-Game HUD.tscn::PackedScene::-1::1687308525::0::1::::<><>::res://Game/Player/Player.png<>res://Game/Game HUD/Game HUD.gd<>res://assets/Game_UI.tres
-::res://Game/Player/::1687308472
-Player.gd::GDScript::-1::1687308525::0::1::::Player<>CharacterBody2D<>::
+Meteor.tscn::PackedScene::2399223096900325522::1687315811::0::1::::<><>::uid://bxytuynyysoec<>res://Game/Enemy/Enemy.tscn
+::res://Game/Game HUD/::1687315812
+Game HUD.gd::GDScript::-1::1687311777::0::1::::<>Node2D<>::
+Game HUD.tscn::PackedScene::3731690418244846269::1687315812::0::1::::<><>::uid://m1pu7mo4e6w<>res://Game/Game HUD/Game HUD.gd<>uid://byyj6qjxbrqom
+::res://Game/Player/::1687313709
+Player.gd::GDScript::-1::1687311791::0::1::::Player<>CharacterBody2D<>::
 Player.png::CompressedTexture2D::26379062235042316::1687308472::1687308550::1::::<><>::
-Player.tscn::PackedScene::-1::1687308525::0::1::::<><>::res://Game/Player/Player.gd<>res://Game/Player/Player.png<>res://Sounds/MM9 - Player Hit.wav
-::res://Game/Spawner/::1687308472
-Spawner.gd::GDScript::-1::1687308525::0::1::::<>Node2D<>::
-Spawner.tscn::PackedScene::-1::1687308525::0::1::::<><>::res://Game/Spawner/Spawner.gd
-::res://Game Over/::1687308472
+Player.tscn::PackedScene::5660137712339813283::1687313709::0::1::::<><>::res://Game/Player/Player.gd<>uid://m1pu7mo4e6w<>uid://5nbwoaya44u2
+::res://Game/Spawner/::1687315811
+Spawner.gd::GDScript::-1::1687315811::0::1::::<>Node2D<>::
+Spawner.tscn::PackedScene::882513675949884487::1687313709::0::1::::<><>::res://Game/Spawner/Spawner.gd
+::res://Game Over/::1687315812
 Game Over.gd::GDScript::-1::1687308525::0::1::::<>Node2D<>::
-Game Over.tscn::PackedScene::-1::1687308525::0::1::::<><>::res://assets/Black Background.png<>res://assets/Menu_UI_Large.tres<>res://Game Over/Game Over.gd
-::res://Main Menu/::1687308472
-Main Menu.gd::GDScript::-1::1687308525::0::1::::<>Node2D<>::
-Main Menu.tscn::PackedScene::-1::1687308525::0::1::::<><>::res://Main Menu/Main Menu.gd<>res://assets/Black Background.png<>res://assets/Menu_UI_Large.tres<>res://assets/Menu_UI.tres<>res://assets/Cursor/Menu Cursor.tscn
-::res://Main Menu/High Scores/::1687308472
+Game Over.tscn::PackedScene::1162084371363303231::1687315812::0::1::::<><>::uid://dvo57cm464dg3<>uid://c8qinsadi7jcy<>res://Game Over/Game Over.gd
+::res://Main Menu/::1687315811
+Main Menu.gd::GDScript::-1::1687315811::0::1::::<>Node2D<>::
+Main Menu.tscn::PackedScene::5283367367964612821::1687315811::0::1::::<><>::res://Main Menu/Main Menu.gd<>uid://dvo57cm464dg3<>uid://c8qinsadi7jcy<>uid://c8dtrddouh2ks<>uid://dwbn07v3au846<>uid://d25c2yq18vbsq
+::res://Main Menu/High Scores/::1687315811
 High Scores.gd::GDScript::-1::1687308525::0::1::::<>Node2D<>::
-High Scores.tscn::PackedScene::-1::1687308525::0::1::::<><>::res://assets/Black Background.png<>res://assets/Menu_UI_Large.tres<>res://assets/Menu_UI.tres<>res://Main Menu/High Scores/High Scores.gd
-::res://Main Menu/Settings/::1687308472
-Settings.gd::GDScript::-1::1687308525::0::1::::<>Node2D<>::
-Settings.tscn::PackedScene::-1::1687308525::0::1::::<><>::res://assets/Black Background.png<>res://assets/Menu_UI_Large.tres<>res://assets/Cursor/Menu Cursor.tscn<>res://assets/Menu_UI.tres<>res://Main Menu/Settings/Settings.gd
-::res://Music/::1687308537
+High Scores.tscn::PackedScene::4235183703617612417::1687315811::0::1::::<><>::uid://dvo57cm464dg3<>uid://c8qinsadi7jcy<>uid://c8dtrddouh2ks<>res://Main Menu/High Scores/High Scores.gd
+::res://Main Menu/Settings/::1687315811
+Settings.gd::GDScript::-1::1687312032::0::1::::<>Node2D<>::
+Settings.tscn::PackedScene::90422645434087561::1687315811::0::1::::<><>::uid://dvo57cm464dg3<>uid://c8qinsadi7jcy<>uid://dwbn07v3au846<>uid://c8dtrddouh2ks<>res://Main Menu/Settings/Settings.gd<>uid://d25c2yq18vbsq
+::res://Music/::1687313709
 MM2 - Password.ogg::AudioStreamOggVorbis::4566541547266573832::1687308472::1687308537::1::::<><>::
 MM2 - Victory.wav::AudioStreamWAV::8711339538797527640::1687308472::1687308551::1::::<><>::
 MM3 - Weapon Get.ogg::AudioStreamOggVorbis::7676584344263626641::1687308472::1687308537::1::::<><>::
 MM5 - Gravity Man.ogg::AudioStreamOggVorbis::4473879286730769140::1687308472::1687308537::1::::<><>::
-MusicPlayer.tscn::PackedScene::-1::1687308525::0::1::::<><>::
-::res://Score Entry/::1687308472
+MusicPlayer.tscn::PackedScene::7085576508040897652::1687313709::0::1::::<><>::
+::res://Score Entry/::1687315812
 Score Entry.gd::GDScript::-1::1687308525::0::1::::<>Node2D<>::
-Score Entry.tscn::PackedScene::-1::1687308525::0::1::::<><>::res://assets/Black Background.png<>res://assets/Menu_UI_Large.tres<>res://Score Entry/Score Entry.gd<>res://assets/Menu_UI.tres
-::res://Sounds/::1687308472
+Score Entry.tscn::PackedScene::3125900176993703135::1687315812::0::1::::<><>::uid://dvo57cm464dg3<>uid://c8qinsadi7jcy<>res://Score Entry/Score Entry.gd<>uid://c8dtrddouh2ks
+::res://Sounds/::1687308551
 MM9 - Enemy Hit.wav::AudioStreamWAV::3920286424214860836::1687308472::1687308551::1::::<><>::
 MM9 - Menu.wav::AudioStreamWAV::1404388165064854671::1687308472::1687308551::1::::<><>::
 MM9 - Player Hit.wav::AudioStreamWAV::2132602960820949023::1687308472::1687308551::1::::<><>::
 MM9 - Shoot.wav::AudioStreamWAV::4501563869362835896::1687308472::1687308551::1::::<><>::
-::res://Splash/::1687308472
+::res://Splash/::1687315811
 Load Bar.png::CompressedTexture2D::2619918164377534680::1687308472::1687308550::1::::<><>::
 Splash.gd::GDScript::-1::1687308525::0::1::::<>Node2D<>::
 Splash.png::CompressedTexture2D::7896287424976267848::1687308472::1687308551::1::::<><>::
-Splash.tscn::PackedScene::-1::1687308525::0::1::::<><>::res://Splash/Splash.png<>res://Splash/Splash.gd<>res://Splash/Load Bar.png
+Splash.tscn::PackedScene::9151939967008702850::1687315811::0::1::::<><>::uid://dkrax2py8s5ou<>res://Splash/Splash.gd<>uid://bdldw022iobnk
