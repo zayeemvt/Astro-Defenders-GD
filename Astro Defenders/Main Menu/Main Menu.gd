@@ -46,6 +46,7 @@ func select_option():
 	match Global.cur_selection:
 		Global.MENU_OPTIONS.PLAY:
 			Global.menu = false
+			GameVariables.score = 0
 			get_tree().change_scene_to_file("res://Game/Game.tscn")
 		Global.MENU_OPTIONS.INSTRUCTIONS:
 			pass
